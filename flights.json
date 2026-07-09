@@ -4,21 +4,21 @@
       "route": "DFW ⇄ ALB",
       "dates": "Aug 7–9",
       "type": "buy",
-      "currentPrice": null,
+      "currentPrice": 557,
       "buyTarget": 350,
       "startChecking": "2026-07-09",
       "buyWindowEnd": "2026-07-31",
-      "notes": "AI Conference in Vermont. Target unverified — validate against live market."
+      "notes": "AI Conference in Vermont. 7/9 obs: AA from $557 and that's the Basic floor (Expedia) — Main higher. Target likely unrealistic this close in; consider nonstop AA 391 out."
     },
     {
       "route": "DFW ⇄ SEA",
       "dates": "Aug 19–23",
       "type": "buy",
-      "currentPrice": null,
+      "currentPrice": 322,
       "buyTarget": 300,
       "startChecking": "2026-07-09",
       "buyWindowEnd": "2026-08-07",
-      "notes": "Ragnar Rainier. Target unverified — validate against live market."
+      "notes": "Ragnar Rainier. 7/9 obs: AA nonstops both ways from $322 Basic (Expedia) — Main ~$30–60 more. Close to target; verify on AA.com."
     },
     {
       "route": "DFW ⇄ LHR",
