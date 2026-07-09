@@ -1,7 +1,7 @@
 {
-  "name": "DFW Fare Operations 2026",
-  "short_name": "Fare Ops",
-  "description": "Flight fare watch and booking dashboard",
+  "name": "Flight Ops",
+  "short_name": "Flight Ops",
+  "description": "Personal flight tracking — fare watches and booked trips",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

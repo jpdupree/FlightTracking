@@ -1,4 +1,4 @@
-# Fare Operations 2026 — GitHub Pages Dashboard
+# Flight Ops — GitHub Pages Dashboard
 
 Static replacement for the Google Sheets flight dashboard. All logic (status, sort rank) is computed client-side against today's date, so it stays current without touching formulas.
 
