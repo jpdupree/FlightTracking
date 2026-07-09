@@ -233,6 +233,24 @@
     cursor: pointer;
   }
   .add-btn.dim { color: var(--steel); border-color: var(--line); }
+  .del-btn {
+    display: none;
+    font-family: var(--font-board);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--red);
+    background: var(--cell);
+    border: 1px solid rgba(255,107,92,.4);
+    border-radius: 4px;
+    padding: 9px 4px;
+    cursor: pointer;
+    justify-self: end;
+    min-width: 96px;
+  }
+  body.editing .flap { display: none; }
+  body.editing .del-btn { display: block; }
   .modal-back {
     position: fixed;
     inset: 0;
@@ -296,7 +314,7 @@
     .route { font-size: 19px; }
     .dates { grid-column: 1; }
     .mid { grid-column: 1 / -1; }
-    .flap { grid-row: 1; grid-column: 2; }
+    .flap, .del-btn { grid-row: 1; grid-column: 2; }
   }
 </style>
 </head>
@@ -306,6 +324,7 @@
     <h1><span class="origin">DFW</span> Fare Operations 2026</h1>
     <div class="clock">BOARD DATE <strong id="today"></strong></div>
     <button class="add-btn" id="add-trip" type="button">+ Add Trip</button>
+    <button class="add-btn dim" id="edit-board" type="button">Edit</button>
   </header>
   <div class="subline">AAdvantage Platinum · 2 SWU · 2.0 cpp line · never Basic</div>
 
@@ -395,7 +414,7 @@ function evaluate(w, today) {
   return { label: "LATE", cls: "late", rank: 2.5 };
 }
 
-function watchRow(w, s) {
+function watchRow(w, s, i) {
   const hit = w.currentPrice != null && w.currentPrice <= w.buyTarget;
   return `<div class="row">
     <div>
@@ -415,10 +434,11 @@ function watchRow(w, s) {
       ${w.notes ? `<div class="notes">${w.notes}</div>` : ""}
     </div>
     <div class="flap ${s.cls}">${s.label}</div>
+    <button class="del-btn" type="button" data-list="watches" data-i="${i}">✕ Remove</button>
   </div>`;
 }
 
-function bookedRow(b, today) {
+function bookedRow(b, today, i) {
   const flown = parseISO(b.sortDate) < today;
   return `<div class="row ${flown ? "flown" : ""}">
     <div>
@@ -431,6 +451,7 @@ function bookedRow(b, today) {
       ${b.notes ? `<div class="fare-notes">${b.notes}</div>` : ""}
     </div>
     <div class="flap ${flown ? "flown" : "booked"}">${flown ? "FLOWN" : "BOOKED"}</div>
+    <button class="del-btn" type="button" data-list="booked" data-i="${i}">✕ Remove</button>
   </div>`;
 }
 
@@ -439,15 +460,17 @@ let boardData = null;
 function paint(data) {
   const today = todayMid();
   const watches = data.watches
-    .map(w => ({ w, s: evaluate(w, today) }))
+    .map((w, i) => ({ w, i, s: evaluate(w, today) }))
     .sort((a, b) => a.s.rank - b.s.rank || parseISO(a.w.buyWindowEnd) - parseISO(b.w.buyWindowEnd));
-  document.getElementById("watches").innerHTML = watches.map(({w, s}) => watchRow(w, s)).join("");
+  document.getElementById("watches").innerHTML = watches.map(({w, s, i}) => watchRow(w, s, i)).join("");
   document.getElementById("watch-count").textContent =
     watches.filter(x => x.s.rank === 1).length + " actionable · " + watches.length + " total";
 
-  const booked = [...data.booked].sort((a, b) => parseISO(a.sortDate) - parseISO(b.sortDate));
-  document.getElementById("booked").innerHTML = booked.map(b => bookedRow(b, today)).join("");
-  const upcoming = booked.filter(b => parseISO(b.sortDate) >= today).length;
+  const booked = data.booked
+    .map((b, i) => ({ b, i }))
+    .sort((a, b) => parseISO(a.b.sortDate) - parseISO(b.b.sortDate));
+  document.getElementById("booked").innerHTML = booked.map(({b, i}) => bookedRow(b, today, i)).join("");
+  const upcoming = booked.filter(({b}) => parseISO(b.sortDate) >= today).length;
   document.getElementById("booked-count").textContent = upcoming + " upcoming · " + booked.length + " total";
 }
 
@@ -528,6 +551,32 @@ const b64encode = s => {
   return btoa(out);
 };
 
+async function defaultBranch() {
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO}`);
+    if (r.ok) return (await r.json()).default_branch;
+  } catch {}
+  return FALLBACK_BRANCH;
+}
+
+// GET flights.json, apply mutate(data), PUT it back. Returns the new data.
+async function githubCommit(token, message, mutate) {
+  const api = `https://api.github.com/repos/${REPO}/contents/flights.json`;
+  const headers = { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" };
+  const res = await fetch(api, { headers, cache: "no-store" });
+  if (!res.ok) throw new Error("read flights.json: HTTP " + res.status);
+  const file = await res.json();
+  const data = JSON.parse(b64decode(file.content));
+  mutate(data);
+  const put = await fetch(api, { method: "PUT", headers, body: JSON.stringify({
+    message,
+    content: b64encode(JSON.stringify(data, null, 2) + "\n"),
+    sha: file.sha,
+  })});
+  if (!put.ok) throw new Error("commit: HTTP " + put.status);
+  return data;
+}
+
 document.getElementById("copy-json").onclick = async () => {
   if (!form.reportValidity()) return;
   const { list, entry } = buildEntry();
@@ -544,34 +593,18 @@ form.onsubmit = async (e) => {
   e.preventDefault();
   const { list, entry } = buildEntry();
   const token = form.token.value.trim();
-  const api = `https://api.github.com/repos/${REPO}/contents/flights.json`;
 
   if (!token) {
-    let branch = FALLBACK_BRANCH;
-    try {
-      const r = await fetch(`https://api.github.com/repos/${REPO}`);
-      if (r.ok) branch = (await r.json()).default_branch;
-    } catch {}
     try { await navigator.clipboard.writeText(JSON.stringify(entry, null, 2)); } catch {}
     setMsg(`No token — JSON copied to clipboard. Opening the GitHub editor: paste it into the "${list}" array and commit.`);
-    window.open(`https://github.com/${REPO}/edit/${branch}/flights.json`, "_blank");
+    window.open(`https://github.com/${REPO}/edit/${await defaultBranch()}/flights.json`, "_blank");
     return;
   }
 
   setMsg("Committing…");
   try {
-    const headers = { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" };
-    const res = await fetch(api, { headers, cache: "no-store" });
-    if (!res.ok) throw new Error("read flights.json: HTTP " + res.status);
-    const file = await res.json();
-    const data = JSON.parse(b64decode(file.content));
-    data[list].push(entry);
-    const put = await fetch(api, { method: "PUT", headers, body: JSON.stringify({
-      message: `Add trip: ${entry.route} (${entry.dates})`,
-      content: b64encode(JSON.stringify(data, null, 2) + "\n"),
-      sha: file.sha,
-    })});
-    if (!put.ok) throw new Error("commit: HTTP " + put.status);
+    const data = await githubCommit(token, `Add trip: ${entry.route} (${entry.dates})`,
+      d => d[list].push(entry));
     localStorage.setItem("gh-token", token);
     boardData = data;
     paint(data);
@@ -581,6 +614,46 @@ form.onsubmit = async (e) => {
       ". Check the token has Contents read/write on " + REPO + ".", true);
   }
 };
+
+// ── Remove trips: Edit toggles ✕ buttons in place of the status tiles ──
+const editBtn = document.getElementById("edit-board");
+editBtn.onclick = () => {
+  const editing = document.body.classList.toggle("editing");
+  editBtn.textContent = editing ? "Done" : "Edit";
+};
+
+document.addEventListener("click", async (e) => {
+  const btn = e.target.closest(".del-btn");
+  if (!btn) return;
+  const list = btn.dataset.list;
+  const entry = boardData && boardData[list] && boardData[list][Number(btn.dataset.i)];
+  if (!entry) return;
+  if (!confirm(`Remove ${entry.route} (${entry.dates}) from the board?`)) return;
+
+  const token = localStorage.getItem("gh-token");
+  if (!token) {
+    alert(`No saved token — opening the GitHub editor. Delete the ${entry.route} (${entry.dates}) object from the "${list}" array and commit.`);
+    window.open(`https://github.com/${REPO}/edit/${await defaultBranch()}/flights.json`, "_blank");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "…";
+  try {
+    const data = await githubCommit(token, `Remove trip: ${entry.route} (${entry.dates})`, d => {
+      const idx = d[list].findIndex(x => x.route === entry.route && x.dates === entry.dates
+        && (list === "booked" || x.type === entry.type));
+      if (idx < 0) throw new Error("entry not found in the latest flights.json");
+      d[list].splice(idx, 1);
+    });
+    boardData = data;
+    paint(data);
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = "✕ Remove";
+    alert("Remove failed — " + err.message + ". Check the token has Contents read/write on " + REPO + ".");
+  }
+});
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js");
