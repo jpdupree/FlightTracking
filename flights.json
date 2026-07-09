@@ -86,11 +86,11 @@
       "route": "DFW - MSY",
       "dates": "Sep 18-19",
       "type": "buy",
-      "currentPrice": null,
-      "buyTarget": null,
-      "startChecking": null,
-      "buyWindowEnd": null,
-      "notes": "Test trip"
+      "currentPrice": 189,
+      "buyTarget": 170,
+      "startChecking": "2026-07-09",
+      "buyWindowEnd": "2026-09-04",
+      "notes": "Test trip. 7/9 obs: AA nonstops both ways from $189 Basic floor (Expedia) — Main $30–80 more. Target auto-set to ~90% of first observation."
     }
   ],
   "booked": [
