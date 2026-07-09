@@ -17,6 +17,13 @@ The dashboard is a PWA (manifest + service worker + icons), so it installs as a 
 
 It opens full-screen with the split-flap DFW icon. Data refreshes from the network on each open; if you're offline it shows the last cached board.
 
+## Adding trips from the app
+
+The **+ Add Trip** button opens a form for fare watches, reprice watches, and booked segments. Two ways to save:
+
+- **One-tap commit (recommended):** create a [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new) scoped to only this repo with **Contents: Read and write** permission, and paste it into the form's token field once. It's stored in your browser's localStorage on that device only, and the app commits straight to `flights.json` — the board updates immediately and Pages redeploys in ~1 minute.
+- **No token:** the app copies the trip's JSON to your clipboard and opens the GitHub web editor — paste it into the right array and commit.
+
 ## Daily workflow (replaces editing the spreadsheet)
 
 All data lives in `flights.json`. Edit it in the GitHub web editor (press `.` in the repo or click the pencil icon), commit, and Pages redeploys automatically in ~30 seconds. From your phone, the github.com mobile editor works fine for this.

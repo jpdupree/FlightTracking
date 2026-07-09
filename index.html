@@ -218,6 +218,79 @@
     line-height: 1.5;
   }
 
+  /* ── Add trip ── */
+  .add-btn {
+    font-family: var(--font-board);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--amber);
+    background: var(--cell);
+    border: 1px solid rgba(255,182,39,.35);
+    border-radius: 4px;
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  .add-btn.dim { color: var(--steel); border-color: var(--line); }
+  .modal-back {
+    position: fixed;
+    inset: 0;
+    background: rgba(8,10,13,.78);
+    overflow-y: auto;
+    padding: 32px 16px;
+    z-index: 20;
+  }
+  .modal-back[hidden] { display: none; }
+  .modal {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 22px;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .modal h3 {
+    font-family: var(--font-board);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  .modal label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--steel-dim);
+    margin: 14px 0 5px;
+  }
+  .modal input, .modal select {
+    width: 100%;
+    background: var(--cell);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    color: var(--white);
+    font-family: var(--font-data);
+    font-size: 14px;
+    padding: 9px 10px;
+  }
+  .modal input:focus, .modal select:focus {
+    outline: none;
+    border-color: rgba(255,182,39,.5);
+  }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .modal .actions { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+  .modal-msg {
+    font-size: 12px;
+    color: var(--steel);
+    margin-top: 12px;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  .modal-msg.err { color: var(--red); }
+
   @media (max-width: 700px) {
     .row { grid-template-columns: 1fr 96px; row-gap: 8px; }
     .route { font-size: 19px; }
@@ -232,6 +305,7 @@
   <header>
     <h1><span class="origin">DFW</span> Fare Operations 2026</h1>
     <div class="clock">BOARD DATE <strong id="today"></strong></div>
+    <button class="add-btn" id="add-trip" type="button">+ Add Trip</button>
   </header>
   <div class="subline">AAdvantage Platinum · 2 SWU · 2.0 cpp line · never Basic</div>
 
@@ -246,6 +320,50 @@
     <span class="count" id="booked-count"></span>
   </div>
   <div class="board" id="booked"></div>
+
+  <div class="modal-back" id="modal-back" hidden>
+    <div class="modal">
+      <h3>Add Trip</h3>
+      <form id="trip-form">
+        <label for="f-kind">Kind</label>
+        <select id="f-kind" name="kind">
+          <option value="buy">Fare watch — not booked yet</option>
+          <option value="reprice">Reprice watch — booked, watching for a drop</option>
+          <option value="booked">Booked segment</option>
+        </select>
+        <label>Route</label>
+        <input name="route" placeholder="DFW ⇄ SEA" required>
+        <label>Dates</label>
+        <input name="dates" placeholder="Sep 18–20" required>
+        <div id="watch-fields">
+          <div class="field-row">
+            <div><label>Buy target $</label><input name="buyTarget" type="number" inputmode="numeric" min="0"></div>
+            <div><label>Current price $</label><input name="currentPrice" type="number" inputmode="numeric" min="0"></div>
+          </div>
+          <div class="field-row">
+            <div><label>Start checking</label><input name="startChecking" type="date"></div>
+            <div><label>Window end</label><input name="buyWindowEnd" type="date"></div>
+          </div>
+        </div>
+        <div id="booked-fields" hidden>
+          <label>Flight date</label>
+          <input name="sortDate" type="date">
+          <label>Fare</label>
+          <input name="fare" placeholder="$266 · Main">
+        </div>
+        <label>Notes</label>
+        <input name="notes">
+        <label>GitHub token — optional, enables one-tap commit · stored only on this device</label>
+        <input name="token" type="password" placeholder="github_pat_…" autocomplete="off">
+        <div class="actions">
+          <button type="submit" class="add-btn">Commit to Board</button>
+          <button type="button" class="add-btn dim" id="copy-json">Copy JSON</button>
+          <button type="button" class="add-btn dim" id="modal-cancel">Cancel</button>
+        </div>
+        <div class="modal-msg" id="modal-msg"></div>
+      </form>
+    </div>
+  </div>
 
   <div class="framework">
     <div><b>Status logic.</b> TOO EARLY before start-check date · BUY NOW when current ≤ target · WATCH inside the window · LATE past it. Reprice rows flip green when the fare hits target.</div>
@@ -316,9 +434,25 @@ function bookedRow(b, today) {
   </div>`;
 }
 
-async function render() {
+let boardData = null;
+
+function paint(data) {
   const today = todayMid();
-  document.getElementById("today").textContent = today.toLocaleDateString("en-US",
+  const watches = data.watches
+    .map(w => ({ w, s: evaluate(w, today) }))
+    .sort((a, b) => a.s.rank - b.s.rank || parseISO(a.w.buyWindowEnd) - parseISO(b.w.buyWindowEnd));
+  document.getElementById("watches").innerHTML = watches.map(({w, s}) => watchRow(w, s)).join("");
+  document.getElementById("watch-count").textContent =
+    watches.filter(x => x.s.rank === 1).length + " actionable · " + watches.length + " total";
+
+  const booked = [...data.booked].sort((a, b) => parseISO(a.sortDate) - parseISO(b.sortDate));
+  document.getElementById("booked").innerHTML = booked.map(b => bookedRow(b, today)).join("");
+  const upcoming = booked.filter(b => parseISO(b.sortDate) >= today).length;
+  document.getElementById("booked-count").textContent = upcoming + " upcoming · " + booked.length + " total";
+}
+
+async function render() {
+  document.getElementById("today").textContent = todayMid().toLocaleDateString("en-US",
     { weekday: "short", month: "short", day: "numeric", year: "numeric" }).toUpperCase();
 
   let data;
@@ -333,20 +467,120 @@ async function render() {
     document.getElementById("booked").remove();
     return;
   }
-
-  const watches = data.watches
-    .map(w => ({ w, s: evaluate(w, today) }))
-    .sort((a, b) => a.s.rank - b.s.rank || parseISO(a.w.buyWindowEnd) - parseISO(b.w.buyWindowEnd));
-  document.getElementById("watches").innerHTML = watches.map(({w, s}) => watchRow(w, s)).join("");
-  document.getElementById("watch-count").textContent =
-    watches.filter(x => x.s.rank === 1).length + " actionable · " + watches.length + " total";
-
-  const booked = [...data.booked].sort((a, b) => parseISO(a.sortDate) - parseISO(b.sortDate));
-  document.getElementById("booked").innerHTML = booked.map(b => bookedRow(b, today)).join("");
-  const upcoming = booked.filter(b => parseISO(b.sortDate) >= today).length;
-  document.getElementById("booked-count").textContent = upcoming + " upcoming · " + booked.length + " total";
+  boardData = data;
+  paint(data);
 }
 render();
+
+// ── Add Trip: commits straight to flights.json via the GitHub contents API
+// (fine-grained token, stored in localStorage), or falls back to
+// copy-the-JSON + open the web editor when no token is saved. ──
+const REPO = "jpdupree/FlightTracking";
+const FALLBACK_BRANCH = "claude/new-repo-pages-mobile-3nnfc9";
+const modalBack = document.getElementById("modal-back");
+const form = document.getElementById("trip-form");
+const msg = document.getElementById("modal-msg");
+
+const setMsg = (text, isErr) => {
+  msg.className = "modal-msg" + (isErr ? " err" : "");
+  msg.textContent = text;
+};
+
+function syncKind() {
+  const booked = form.kind.value === "booked";
+  document.getElementById("watch-fields").hidden = booked;
+  document.getElementById("booked-fields").hidden = !booked;
+  ["buyTarget", "startChecking", "buyWindowEnd"].forEach(n => form[n].required = !booked);
+  ["sortDate", "fare"].forEach(n => form[n].required = booked);
+}
+form.kind.onchange = syncKind;
+
+document.getElementById("add-trip").onclick = () => {
+  form.reset();
+  form.token.value = localStorage.getItem("gh-token") || "";
+  form.startChecking.value = todayMid().toLocaleDateString("sv-SE");
+  syncKind();
+  setMsg("");
+  modalBack.hidden = false;
+};
+document.getElementById("modal-cancel").onclick = () => { modalBack.hidden = true; };
+modalBack.addEventListener("click", e => { if (e.target === modalBack) modalBack.hidden = true; });
+
+function buildEntry() {
+  const v = n => form[n].value.trim();
+  const num = n => form[n].value === "" ? null : Number(form[n].value);
+  if (form.kind.value === "booked") {
+    return { list: "booked", entry: {
+      route: v("route"), dates: v("dates"), sortDate: v("sortDate"),
+      fare: v("fare"), notes: v("notes") } };
+  }
+  return { list: "watches", entry: {
+    route: v("route"), dates: v("dates"), type: form.kind.value,
+    currentPrice: num("currentPrice"), buyTarget: num("buyTarget"),
+    startChecking: v("startChecking"), buyWindowEnd: v("buyWindowEnd"),
+    notes: v("notes") } };
+}
+
+const b64decode = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g, "")), c => c.charCodeAt(0)));
+const b64encode = s => {
+  let out = "";
+  new TextEncoder().encode(s).forEach(c => { out += String.fromCharCode(c); });
+  return btoa(out);
+};
+
+document.getElementById("copy-json").onclick = async () => {
+  if (!form.reportValidity()) return;
+  const { list, entry } = buildEntry();
+  const text = JSON.stringify(entry, null, 2);
+  try {
+    await navigator.clipboard.writeText(text);
+    setMsg(`Copied — paste into the "${list}" array in flights.json.`);
+  } catch {
+    setMsg(text);
+  }
+};
+
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  const { list, entry } = buildEntry();
+  const token = form.token.value.trim();
+  const api = `https://api.github.com/repos/${REPO}/contents/flights.json`;
+
+  if (!token) {
+    let branch = FALLBACK_BRANCH;
+    try {
+      const r = await fetch(`https://api.github.com/repos/${REPO}`);
+      if (r.ok) branch = (await r.json()).default_branch;
+    } catch {}
+    try { await navigator.clipboard.writeText(JSON.stringify(entry, null, 2)); } catch {}
+    setMsg(`No token — JSON copied to clipboard. Opening the GitHub editor: paste it into the "${list}" array and commit.`);
+    window.open(`https://github.com/${REPO}/edit/${branch}/flights.json`, "_blank");
+    return;
+  }
+
+  setMsg("Committing…");
+  try {
+    const headers = { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" };
+    const res = await fetch(api, { headers, cache: "no-store" });
+    if (!res.ok) throw new Error("read flights.json: HTTP " + res.status);
+    const file = await res.json();
+    const data = JSON.parse(b64decode(file.content));
+    data[list].push(entry);
+    const put = await fetch(api, { method: "PUT", headers, body: JSON.stringify({
+      message: `Add trip: ${entry.route} (${entry.dates})`,
+      content: b64encode(JSON.stringify(data, null, 2) + "\n"),
+      sha: file.sha,
+    })});
+    if (!put.ok) throw new Error("commit: HTTP " + put.status);
+    localStorage.setItem("gh-token", token);
+    boardData = data;
+    paint(data);
+    modalBack.hidden = true;
+  } catch (err) {
+    setMsg("Commit failed — " + err.message +
+      ". Check the token has Contents read/write on " + REPO + ".", true);
+  }
+};
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js");

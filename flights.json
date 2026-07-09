@@ -1,6 +1,46 @@
 {
   "watches": [
     {
+      "route": "DFW ⇄ ALB",
+      "dates": "Aug 7–9",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": 350,
+      "startChecking": "2026-07-09",
+      "buyWindowEnd": "2026-07-31",
+      "notes": "AI Conference in Vermont. Target unverified — validate against live market."
+    },
+    {
+      "route": "DFW ⇄ SEA",
+      "dates": "Aug 19–23",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": 300,
+      "startChecking": "2026-07-09",
+      "buyWindowEnd": "2026-08-07",
+      "notes": "Ragnar Rainier. Target unverified — validate against live market."
+    },
+    {
+      "route": "DFW ⇄ LHR",
+      "dates": "Jun 22 – Jul 6, 2027",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": 1200,
+      "startChecking": "2026-12-15",
+      "buyWindowEnd": "2027-04-30",
+      "notes": "World's Toughest Mudder 2027. Target unverified — validate against live market."
+    },
+    {
+      "route": "DFW ⇄ ZRH",
+      "dates": "Aug 4–11, 2027",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": 1300,
+      "startChecking": "2027-01-15",
+      "buyWindowEnd": "2027-06-01",
+      "notes": "Swiss Alps 100. Target unverified — validate against live market."
+    },
+    {
       "route": "DFW ⇄ SEA",
       "dates": "Sep 18–20",
       "type": "buy",
