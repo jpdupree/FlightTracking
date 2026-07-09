@@ -1,0 +1,132 @@
+{
+  "watches": [
+    {
+      "route": "DFW ⇄ SEA",
+      "dates": "Sep 18–20",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": 300,
+      "startChecking": "2026-07-10",
+      "buyWindowEnd": "2026-08-28",
+      "notes": "Target unverified — validate against live market before trusting (prior targets ran stale)."
+    },
+    {
+      "route": "DFW ⇄ YYZ",
+      "dates": "Oct 16–18",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": 280,
+      "startChecking": "2026-08-07",
+      "buyWindowEnd": "2026-09-25",
+      "notes": "Target unverified — validate against live market before trusting."
+    },
+    {
+      "route": "CUN → TPA",
+      "dates": "Nov 13",
+      "type": "reprice",
+      "currentPrice": 266,
+      "buyTarget": 250,
+      "bookedPrice": 266,
+      "startChecking": "2026-07-01",
+      "buyWindowEnd": "2026-11-06",
+      "notes": "Booked $266 Main. Reprice via Change Flight flow if sub-$250 — difference returns as trip credit."
+    },
+    {
+      "route": "DFW ⇄ COS",
+      "dates": "Sep 24–28",
+      "type": "reprice",
+      "currentPrice": null,
+      "buyTarget": 325,
+      "bookedPrice": null,
+      "startChecking": "2026-07-01",
+      "buyWindowEnd": "2026-09-17",
+      "notes": "Booked 22k miles + $11 (~1.97 cpp). Switch to cash if Main drops below $325 — award cancels and redeposits cleanly."
+    }
+  ],
+  "booked": [
+    {
+      "route": "DFW → NYC",
+      "dates": "Mar 13–15",
+      "sortDate": "2026-03-13",
+      "fare": "Cash · Main",
+      "notes": ""
+    },
+    {
+      "route": "DFW → EYW",
+      "dates": "Apr 1–7",
+      "sortDate": "2026-04-01",
+      "fare": "52k miles · 2 pax",
+      "notes": "Excellent redemption"
+    },
+    {
+      "route": "DFW → RDU",
+      "dates": "May 1–3",
+      "sortDate": "2026-05-01",
+      "fare": "Cash · Main",
+      "notes": "RDU over CLT/FAY"
+    },
+    {
+      "route": "DFW → ALB",
+      "dates": "May 7–10",
+      "sortDate": "2026-05-07",
+      "fare": "Cash · Main",
+      "notes": "Vermont wedding"
+    },
+    {
+      "route": "DFW ⇄ LHR",
+      "dates": "Jun 23–30",
+      "sortDate": "2026-06-23",
+      "fare": "$2,125 · Main · YBOHIV",
+      "notes": "AA 20 out / AA 79 back · SWU applied"
+    },
+    {
+      "route": "DFW → EWR",
+      "dates": "Jul 10–12",
+      "sortDate": "2026-07-10",
+      "fare": "Cash · Main",
+      "notes": "Poconos trip"
+    },
+    {
+      "route": "DFW ⇄ MEX",
+      "dates": "Jul 31 – Aug 2",
+      "sortDate": "2026-07-31",
+      "fare": "Cash · Main",
+      "notes": ""
+    },
+    {
+      "route": "DFW ⇄ COS",
+      "dates": "Sep 24–28",
+      "sortDate": "2026-09-24",
+      "fare": "22k miles + $11 · ~1.97 cpp",
+      "notes": "100-mile race · watching cash switch < $325"
+    },
+    {
+      "route": "DFW → SMF",
+      "dates": "Nov 6",
+      "sortDate": "2026-11-06",
+      "fare": "9.5k miles · ~2.45 cpp",
+      "notes": ""
+    },
+    {
+      "route": "SMF → CUN",
+      "dates": "Nov 9",
+      "sortDate": "2026-11-09",
+      "fare": "11k miles · ~3.2 cpp",
+      "notes": "Excellent redemption"
+    },
+    {
+      "route": "CUN → TPA",
+      "dates": "Nov 13",
+      "sortDate": "2026-11-13",
+      "fare": "$266 · Main",
+      "notes": "Reprice watch < $250"
+    },
+    {
+      "route": "TPA → DFW",
+      "dates": "Nov 14",
+      "sortDate": "2026-11-14",
+      "fare": "$279 · Main",
+      "notes": "Evening nonstop required"
+    }
+  ]
+}

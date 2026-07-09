@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>DFW · Fare Operations 2026</title>
+<meta name="theme-color" content="#101418">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Fare Ops">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #101418;
+    --panel: #161B21;
+    --cell: #0B0E12;
+    --seam: #1F262E;
+    --line: #232B34;
+    --amber: #FFB627;
+    --green: #3DD68C;
+    --red: #FF6B5C;
+    --steel: #8B96A3;
+    --steel-dim: #5A6572;
+    --white: #E9EEF3;
+    --font-board: "Barlow Condensed", sans-serif;
+    --font-data: "IBM Plex Mono", monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    font-family: var(--font-data);
+    color: var(--white);
+    background:
+      radial-gradient(1200px 400px at 50% -100px, #1A222B 0%, var(--bg) 70%);
+    min-height: 100vh;
+    padding: calc(32px + env(safe-area-inset-top)) 20px calc(64px + env(safe-area-inset-bottom));
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+
+  /* ── Masthead, styled as a board header row ── */
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 3px solid var(--amber);
+    padding-bottom: 14px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-family: var(--font-board);
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 44px);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  h1 .origin { color: var(--amber); }
+  .clock {
+    font-size: 13px;
+    color: var(--steel);
+    letter-spacing: 0.08em;
+  }
+  .clock strong { color: var(--white); font-weight: 500; }
+  .subline {
+    font-size: 12px;
+    color: var(--steel-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+  }
+
+  /* ── Section headers ── */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 44px 0 12px;
+  }
+  h2 {
+    font-family: var(--font-board);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  .count { font-size: 12px; color: var(--steel-dim); }
+
+  /* ── Board rows ── */
+  .board {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 150px 130px 1fr 96px;
+    gap: 0 18px;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: none; }
+  .row.flown { opacity: 0.38; }
+
+  .route {
+    font-family: var(--font-board);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+  .dates { font-size: 13px; color: var(--steel); white-space: nowrap; }
+
+  .mid { min-width: 0; }
+  .prices {
+    display: flex;
+    gap: 22px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .prices .lbl {
+    color: var(--steel-dim);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .prices .val { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .val.hit { color: var(--green); }
+  .val.none { color: var(--steel-dim); }
+  .notes {
+    font-size: 11.5px;
+    color: var(--steel);
+    margin-top: 7px;
+    line-height: 1.45;
+    max-width: 56ch;
+  }
+  .fare { font-size: 13px; color: var(--white); }
+  .fare-notes { font-size: 11.5px; color: var(--steel); margin-top: 4px; }
+
+  /* ── Signature: split-flap status tile ── */
+  .flap {
+    font-family: var(--font-board);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    text-align: center;
+    background: var(--cell);
+    border: 1px solid var(--seam);
+    border-radius: 4px;
+    padding: 9px 4px;
+    position: relative;
+    overflow: hidden;
+    justify-self: end;
+    min-width: 96px;
+    transform-style: preserve-3d;
+  }
+  .flap::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 50%;
+    height: 1px;
+    background: var(--seam);
+  }
+  .flap.buy     { color: var(--green); border-color: rgba(61,214,140,.35); }
+  .flap.watch   { color: var(--amber); border-color: rgba(255,182,39,.35); }
+  .flap.early   { color: var(--steel); }
+  .flap.late    { color: var(--red);   border-color: rgba(255,107,92,.35); }
+  .flap.reprice { color: var(--green); border-color: rgba(61,214,140,.35); }
+  .flap.flown   { color: var(--steel-dim); }
+  .flap.booked  { color: var(--white); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .flap { animation: flip .5s cubic-bezier(.3,.7,.3,1) backwards; }
+    .row:nth-child(1) .flap { animation-delay: .05s; }
+    .row:nth-child(2) .flap { animation-delay: .13s; }
+    .row:nth-child(3) .flap { animation-delay: .21s; }
+    .row:nth-child(4) .flap { animation-delay: .29s; }
+    .row:nth-child(5) .flap { animation-delay: .37s; }
+    .row:nth-child(6) .flap { animation-delay: .45s; }
+    @keyframes flip {
+      from { transform: rotateX(90deg); }
+      to   { transform: rotateX(0deg); }
+    }
+  }
+
+  /* ── Legend / framework footer ── */
+  .framework {
+    margin-top: 52px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px 28px;
+    font-size: 12px;
+    color: var(--steel);
+    line-height: 1.5;
+  }
+  .framework b { color: var(--white); font-weight: 500; }
+
+  .error {
+    background: var(--panel);
+    border: 1px solid rgba(255,107,92,.4);
+    border-radius: 6px;
+    padding: 18px;
+    font-size: 13px;
+    color: var(--red);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 700px) {
+    .row { grid-template-columns: 1fr 96px; row-gap: 8px; }
+    .route { font-size: 19px; }
+    .dates { grid-column: 1; }
+    .mid { grid-column: 1 / -1; }
+    .flap { grid-row: 1; grid-column: 2; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><span class="origin">DFW</span> Fare Operations 2026</h1>
+    <div class="clock">BOARD DATE <strong id="today"></strong></div>
+  </header>
+  <div class="subline">AAdvantage Platinum · 2 SWU · 2.0 cpp line · never Basic</div>
+
+  <div class="section-head">
+    <h2>Active Watches</h2>
+    <span class="count" id="watch-count"></span>
+  </div>
+  <div class="board" id="watches"></div>
+
+  <div class="section-head">
+    <h2>Booked Segments</h2>
+    <span class="count" id="booked-count"></span>
+  </div>
+  <div class="board" id="booked"></div>
+
+  <div class="framework">
+    <div><b>Status logic.</b> TOO EARLY before start-check date · BUY NOW when current ≤ target · WATCH inside the window · LATE past it. Reprice rows flip green when the fare hits target.</div>
+    <div><b>Reprice mechanics.</b> Change Flight flow, identical segments — difference returns as trip credit. SWU survives a rebook via Change.</div>
+    <div><b>Miles line.</b> 2.0 cpp is the miles-vs-cash decision line; below that, pay cash. Awards cancel and redeposit cleanly — use as optionality.</div>
+  </div>
+</div>
+
+<script>
+const fmt$ = n => n == null ? "—" : "$" + n.toLocaleString("en-US");
+const parseISO = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); };
+const todayMid = () => { const t = new Date(); return new Date(t.getFullYear(), t.getMonth(), t.getDate()); };
+
+// Ported from the Sheets Status formula (col H) + Sort Rank (col I),
+// extended with a "reprice" type for booked fares being watched for drops.
+function evaluate(w, today) {
+  const start = parseISO(w.startChecking);
+  const end = parseISO(w.buyWindowEnd);
+  const hit = w.currentPrice != null && w.currentPrice <= w.buyTarget;
+
+  if (w.type === "reprice") {
+    if (hit) return { label: "REPRICE", cls: "reprice", rank: 1 };
+    if (today > end) return { label: "CLOSED", cls: "flown", rank: 4 };
+    return { label: "WATCH", cls: "watch", rank: 2 };
+  }
+  if (today < start) return { label: "TOO EARLY", cls: "early", rank: 3 };
+  if (hit) return { label: "BUY NOW", cls: "buy", rank: 1 };
+  if (today <= end) return { label: "WATCH", cls: "watch", rank: 2 };
+  return { label: "LATE", cls: "late", rank: 2.5 };
+}
+
+function watchRow(w, s) {
+  const hit = w.currentPrice != null && w.currentPrice <= w.buyTarget;
+  return `<div class="row">
+    <div>
+      <div class="route">${w.route}</div>
+      <div class="dates">${w.dates}</div>
+    </div>
+    <div class="dates">
+      Window<br>${w.startChecking.slice(5).replace("-", "/")} → ${w.buyWindowEnd.slice(5).replace("-", "/")}
+    </div>
+    <div class="mid">
+      <div class="prices">
+        <div><span class="lbl">${w.type === "reprice" ? "Booked / Current" : "Current"}</span>
+          <span class="val ${hit ? "hit" : w.currentPrice == null ? "none" : ""}">${fmt$(w.currentPrice)}</span></div>
+        <div><span class="lbl">${w.type === "reprice" ? "Reprice target" : "Buy target"}</span>
+          <span class="val">${w.type === "reprice" && w.route.includes("COS") ? "< " : "≤ "}${fmt$(w.buyTarget)}</span></div>
+      </div>
+      ${w.notes ? `<div class="notes">${w.notes}</div>` : ""}
+    </div>
+    <div class="flap ${s.cls}">${s.label}</div>
+  </div>`;
+}
+
+function bookedRow(b, today) {
+  const flown = parseISO(b.sortDate) < today;
+  return `<div class="row ${flown ? "flown" : ""}">
+    <div>
+      <div class="route">${b.route}</div>
+      <div class="dates">${b.dates}</div>
+    </div>
+    <div></div>
+    <div class="mid">
+      <div class="fare">${b.fare}</div>
+      ${b.notes ? `<div class="fare-notes">${b.notes}</div>` : ""}
+    </div>
+    <div class="flap ${flown ? "flown" : "booked"}">${flown ? "FLOWN" : "BOOKED"}</div>
+  </div>`;
+}
+
+async function render() {
+  const today = todayMid();
+  document.getElementById("today").textContent = today.toLocaleDateString("en-US",
+    { weekday: "short", month: "short", day: "numeric", year: "numeric" }).toUpperCase();
+
+  let data;
+  try {
+    const res = await fetch("flights.json", { cache: "no-store" });
+    if (!res.ok) throw new Error(res.status);
+    data = await res.json();
+  } catch (e) {
+    document.getElementById("watches").outerHTML =
+      `<div class="error">Couldn't load flights.json. If you opened this file directly, serve it locally
+      (<code>python3 -m http.server</code>) — fetch is blocked on file:// URLs. On GitHub Pages this works as-is.</div>`;
+    document.getElementById("booked").remove();
+    return;
+  }
+
+  const watches = data.watches
+    .map(w => ({ w, s: evaluate(w, today) }))
+    .sort((a, b) => a.s.rank - b.s.rank || parseISO(a.w.buyWindowEnd) - parseISO(b.w.buyWindowEnd));
+  document.getElementById("watches").innerHTML = watches.map(({w, s}) => watchRow(w, s)).join("");
+  document.getElementById("watch-count").textContent =
+    watches.filter(x => x.s.rank === 1).length + " actionable · " + watches.length + " total";
+
+  const booked = [...data.booked].sort((a, b) => parseISO(a.sortDate) - parseISO(b.sortDate));
+  document.getElementById("booked").innerHTML = booked.map(b => bookedRow(b, today)).join("");
+  const upcoming = booked.filter(b => parseISO(b.sortDate) >= today).length;
+  document.getElementById("booked-count").textContent = upcoming + " upcoming · " + booked.length + " total";
+}
+render();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+</body>
+</html>
