@@ -81,6 +81,16 @@
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
       "notes": "Booked 22k miles + $11 (~1.97 cpp). Switch to cash if Main drops below $325 — award cancels and redeposits cleanly."
+    },
+    {
+      "route": "DFW - MSY",
+      "dates": "Sep 18-19",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": null,
+      "startChecking": null,
+      "buyWindowEnd": null,
+      "notes": "Test trip"
     }
   ],
   "booked": [
