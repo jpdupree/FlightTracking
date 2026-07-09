@@ -19,7 +19,7 @@ It opens full-screen with the split-flap DFW icon. Data refreshes from the netwo
 
 ## Adding trips from the app
 
-The **+ Add Trip** button opens a form for fare watches, reprice watches, and booked segments. Two ways to save:
+The **+ Add Trip** button opens a form for fare watches, reprice watches, and booked segments. For watches, only route and dates are needed — the daily checker fills in the current price, sets a buy target, and derives the check window; until then the row shows PENDING. Two ways to save:
 
 - **One-tap commit (recommended):** create a [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new) scoped to only this repo with **Contents: Read and write** permission, and paste it into the form's token field once. It's stored in your browser's localStorage on that device only, and the app commits straight to `flights.json` — the board updates immediately and Pages redeploys in ~1 minute.
 - **No token:** the app copies the trip's JSON to your clipboard and opens the GitHub web editor — paste it into the right array and commit.

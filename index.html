@@ -355,14 +355,8 @@
         <label>Dates</label>
         <input name="dates" placeholder="Sep 18–20" required>
         <div id="watch-fields">
-          <div class="field-row">
-            <div><label>Buy target $</label><input name="buyTarget" type="number" inputmode="numeric" min="0"></div>
-            <div><label>Current price $</label><input name="currentPrice" type="number" inputmode="numeric" min="0"></div>
-          </div>
-          <div class="field-row">
-            <div><label>Start checking</label><input name="startChecking" type="date"></div>
-            <div><label>Window end</label><input name="buyWindowEnd" type="date"></div>
-          </div>
+          <label>Buy target $ — optional · the daily checker sets targets, prices and check windows</label>
+          <input name="buyTarget" type="number" inputmode="numeric" min="0" placeholder="auto">
         </div>
         <div id="booked-fields" hidden>
           <label>Flight date</label>
@@ -399,9 +393,11 @@ const todayMid = () => { const t = new Date(); return new Date(t.getFullYear(), 
 // Ported from the Sheets Status formula (col H) + Sort Rank (col I),
 // extended with a "reprice" type for booked fares being watched for drops.
 function evaluate(w, today) {
+  const hit = w.currentPrice != null && w.buyTarget != null && w.currentPrice <= w.buyTarget;
+  // Freshly added rows: the daily checker fills windows, target and price.
+  if (!w.startChecking || !w.buyWindowEnd) return { label: "PENDING", cls: "early", rank: 2.8 };
   const start = parseISO(w.startChecking);
   const end = parseISO(w.buyWindowEnd);
-  const hit = w.currentPrice != null && w.currentPrice <= w.buyTarget;
 
   if (w.type === "reprice") {
     if (hit) return { label: "REPRICE", cls: "reprice", rank: 1 };
@@ -415,21 +411,24 @@ function evaluate(w, today) {
 }
 
 function watchRow(w, s, i) {
-  const hit = w.currentPrice != null && w.currentPrice <= w.buyTarget;
+  const hit = w.currentPrice != null && w.buyTarget != null && w.currentPrice <= w.buyTarget;
   return `<div class="row">
     <div>
       <div class="route">${w.route}</div>
       <div class="dates">${w.dates}</div>
     </div>
     <div class="dates">
-      Window<br>${w.startChecking.slice(5).replace("-", "/")} → ${w.buyWindowEnd.slice(5).replace("-", "/")}
+      Window<br>${w.startChecking && w.buyWindowEnd
+        ? w.startChecking.slice(5).replace("-", "/") + " → " + w.buyWindowEnd.slice(5).replace("-", "/")
+        : "pending"}
     </div>
     <div class="mid">
       <div class="prices">
         <div><span class="lbl">${w.type === "reprice" ? "Booked / Current" : "Current"}</span>
           <span class="val ${hit ? "hit" : w.currentPrice == null ? "none" : ""}">${fmt$(w.currentPrice)}</span></div>
         <div><span class="lbl">${w.type === "reprice" ? "Reprice target" : "Buy target"}</span>
-          <span class="val">${w.type === "reprice" && w.route.includes("COS") ? "< " : "≤ "}${fmt$(w.buyTarget)}</span></div>
+          <span class="val ${w.buyTarget == null ? "none" : ""}">${w.buyTarget == null ? "AUTO"
+            : (w.type === "reprice" && w.route.includes("COS") ? "< " : "≤ ") + fmt$(w.buyTarget)}</span></div>
       </div>
       ${w.notes ? `<div class="notes">${w.notes}</div>` : ""}
     </div>
@@ -461,7 +460,9 @@ function paint(data) {
   const today = todayMid();
   const watches = data.watches
     .map((w, i) => ({ w, i, s: evaluate(w, today) }))
-    .sort((a, b) => a.s.rank - b.s.rank || parseISO(a.w.buyWindowEnd) - parseISO(b.w.buyWindowEnd));
+    .sort((a, b) => a.s.rank - b.s.rank ||
+      (a.w.buyWindowEnd ? parseISO(a.w.buyWindowEnd).getTime() : Infinity) -
+      (b.w.buyWindowEnd ? parseISO(b.w.buyWindowEnd).getTime() : Infinity));
   document.getElementById("watches").innerHTML = watches.map(({w, s, i}) => watchRow(w, s, i)).join("");
   document.getElementById("watch-count").textContent =
     watches.filter(x => x.s.rank === 1).length + " actionable · " + watches.length + " total";
@@ -513,7 +514,6 @@ function syncKind() {
   const booked = form.kind.value === "booked";
   document.getElementById("watch-fields").hidden = booked;
   document.getElementById("booked-fields").hidden = !booked;
-  ["buyTarget", "startChecking", "buyWindowEnd"].forEach(n => form[n].required = !booked);
   ["sortDate", "fare"].forEach(n => form[n].required = booked);
 }
 form.kind.onchange = syncKind;
@@ -521,7 +521,6 @@ form.kind.onchange = syncKind;
 document.getElementById("add-trip").onclick = () => {
   form.reset();
   form.token.value = localStorage.getItem("gh-token") || "";
-  form.startChecking.value = todayMid().toLocaleDateString("sv-SE");
   syncKind();
   setMsg("");
   modalBack.hidden = false;
@@ -539,8 +538,8 @@ function buildEntry() {
   }
   return { list: "watches", entry: {
     route: v("route"), dates: v("dates"), type: form.kind.value,
-    currentPrice: num("currentPrice"), buyTarget: num("buyTarget"),
-    startChecking: v("startChecking"), buyWindowEnd: v("buyWindowEnd"),
+    currentPrice: null, buyTarget: num("buyTarget"),
+    startChecking: null, buyWindowEnd: null,
     notes: v("notes") } };
 }
 
