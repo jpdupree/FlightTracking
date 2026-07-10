@@ -65,11 +65,11 @@
       "dates": "Nov 13",
       "type": "reprice",
       "currentPrice": 218,
-      "buyTarget": 250,
+      "buyTarget": 210,
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main. 7/10 obs: AA from $218 Basic floor (Expedia) — verify Main price on AA.com; reprice via Change Flight if Main lands sub-$250 (difference returns as trip credit)."
+      "notes": "Booked $266 Main. 7/10 check: Main only ~$9 under booking and only on long layovers — passed. Target restated as Expedia Basic-floor equivalent (~$40 gap observed); reprice wants sub-$250 Main on comparable routing. Difference returns as trip credit via Change Flight."
     },
     {
       "route": "DFW ⇄ COS",
