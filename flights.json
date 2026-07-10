@@ -43,12 +43,13 @@
     {
       "route": "DFW ⇄ SEA",
       "dates": "Sep 18–20",
-      "type": "buy",
+      "type": "reprice",
       "currentPrice": 352,
-      "buyTarget": 300,
+      "buyTarget": 315,
       "startChecking": "2026-07-10",
       "buyWindowEnd": "2026-08-28",
-      "notes": "7/10 obs: AA nonstops both ways from $352 Basic floor (Expedia) — Main $30–80 higher."
+      "notes": "Booked $406 Main (7/10; floor was $352). Reprice via Change Flight if the floor hits ~$315 (≈ sub-$365 Main, ~$50 gap observed) — difference returns as trip credit.",
+      "bookedPrice": 406
     },
     {
       "route": "DFW ⇄ YYZ",
@@ -167,6 +168,13 @@
       "sortDate": "2026-11-14",
       "fare": "$279 · Main",
       "notes": "Evening nonstop required"
+    },
+    {
+      "route": "DFW ⇄ SEA",
+      "dates": "Sep 18–20",
+      "sortDate": "2026-09-18",
+      "fare": "$406 · Main",
+      "notes": "Reprice watch < ~$365 Main"
     }
   ]
 }
