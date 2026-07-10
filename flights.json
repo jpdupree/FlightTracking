@@ -1,14 +1,15 @@
 {
   "watches": [
     {
-      "route": "DFW ⇄ ALB",
-      "dates": "Aug 7–9",
-      "type": "buy",
-      "currentPrice": 527,
-      "buyTarget": 350,
-      "startChecking": "2026-07-09",
-      "buyWindowEnd": "2026-07-31",
-      "notes": "AI Conference in Vermont. 7/10 obs: AA from $527 Basic floor (Expedia) — Main $30–80 higher. Routings rough at this price; nonstop AA 391 prices higher."
+      "route": "DFW ⇄ BOS",
+      "dates": "Aug 6–11",
+      "type": "reprice",
+      "currentPrice": 249,
+      "buyTarget": 200,
+      "bookedPrice": 349,
+      "startChecking": "2026-07-10",
+      "buyWindowEnd": "2026-08-04",
+      "notes": "Killington via Boston (AI conf) — replaced the ALB watch. Booked $349 Main 7/10; floor was $249 (~$100 gap). Reprice via Change Flight if floor < ~$200 (≈ Main sub-$300) — difference returns as trip credit."
     },
     {
       "route": "DFW ⇄ SEA",
@@ -175,6 +176,13 @@
       "sortDate": "2026-09-18",
       "fare": "$406 · Main",
       "notes": "Reprice watch < ~$365 Main"
+    },
+    {
+      "route": "DFW ⇄ BOS",
+      "dates": "Aug 6–11",
+      "sortDate": "2026-08-06",
+      "fare": "$349 · Main",
+      "notes": "Killington (AI conf) · nonstops · work from Boston Mon · reprice watch < ~$300 Main"
     }
   ]
 }
