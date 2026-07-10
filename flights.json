@@ -4,21 +4,21 @@
       "route": "DFW ⇄ ALB",
       "dates": "Aug 7–9",
       "type": "buy",
-      "currentPrice": 557,
+      "currentPrice": 527,
       "buyTarget": 350,
       "startChecking": "2026-07-09",
       "buyWindowEnd": "2026-07-31",
-      "notes": "AI Conference in Vermont. 7/9 obs: AA from $557 and that's the Basic floor (Expedia) — Main higher. Target likely unrealistic this close in; consider nonstop AA 391 out."
+      "notes": "AI Conference in Vermont. 7/10 obs: AA from $527 Basic floor (Expedia) — Main $30–80 higher. Routings rough at this price; nonstop AA 391 prices higher."
     },
     {
       "route": "DFW ⇄ SEA",
       "dates": "Aug 19–23",
       "type": "buy",
-      "currentPrice": 322,
+      "currentPrice": 377,
       "buyTarget": 300,
       "startChecking": "2026-07-09",
       "buyWindowEnd": "2026-08-07",
-      "notes": "Ragnar Rainier. 7/9 obs: AA nonstops both ways from $322 Basic (Expedia) — Main ~$30–60 more. Close to target; verify on AA.com."
+      "notes": "Ragnar Rainier. 7/10 obs: AA from $377 Basic floor (Expedia) — up 17% from $322 on 7/9. Main $30–80 higher."
     },
     {
       "route": "DFW ⇄ LHR",
@@ -44,11 +44,11 @@
       "route": "DFW ⇄ SEA",
       "dates": "Sep 18–20",
       "type": "buy",
-      "currentPrice": null,
+      "currentPrice": 352,
       "buyTarget": 300,
       "startChecking": "2026-07-10",
       "buyWindowEnd": "2026-08-28",
-      "notes": "Target unverified — validate against live market before trusting (prior targets ran stale)."
+      "notes": "7/10 obs: AA nonstops both ways from $352 Basic floor (Expedia) — Main $30–80 higher."
     },
     {
       "route": "DFW ⇄ YYZ",
@@ -64,23 +64,23 @@
       "route": "CUN → TPA",
       "dates": "Nov 13",
       "type": "reprice",
-      "currentPrice": 266,
+      "currentPrice": 218,
       "buyTarget": 250,
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main. Reprice via Change Flight flow if sub-$250 — difference returns as trip credit."
+      "notes": "Booked $266 Main. 7/10 obs: AA from $218 Basic floor (Expedia) — verify Main price on AA.com; reprice via Change Flight if Main lands sub-$250 (difference returns as trip credit)."
     },
     {
       "route": "DFW ⇄ COS",
       "dates": "Sep 24–28",
       "type": "reprice",
-      "currentPrice": null,
+      "currentPrice": 275,
       "buyTarget": 325,
       "bookedPrice": null,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked 22k miles + $11 (~1.97 cpp). Switch to cash if Main drops below $325 — award cancels and redeposits cleanly."
+      "notes": "Booked 22k miles + $11 (~1.97 cpp). 7/10 obs: AA nonstops from $275 Basic floor (Expedia) — if Main confirms below $325, switch to cash; award cancels and redeposits cleanly."
     }
   ],
   "booked": [
