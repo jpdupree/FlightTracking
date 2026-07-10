@@ -76,11 +76,11 @@
       "dates": "Sep 24–28",
       "type": "reprice",
       "currentPrice": 275,
-      "buyTarget": 325,
+      "buyTarget": 245,
       "bookedPrice": null,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked 22k miles + $11 (~1.97 cpp). 7/10 obs: AA nonstops from $275 Basic floor (Expedia) — if Main confirms below $325, switch to cash; award cancels and redeposits cleanly."
+      "notes": "Booked 25k miles + $11 (~1.38 cpp vs $355 Main at booking, 7/10). Switch to cash if Main drops below ~$325 — target here is the Expedia Basic-floor equivalent (~$80 gap observed). Award cancels and redeposits cleanly."
     }
   ],
   "booked": [
@@ -137,8 +137,8 @@
       "route": "DFW ⇄ COS",
       "dates": "Sep 24–28",
       "sortDate": "2026-09-24",
-      "fare": "22k miles + $11 · ~1.97 cpp",
-      "notes": "100-mile race · watching cash switch < $325"
+      "fare": "25k miles + $11 · ~1.38 cpp",
+      "notes": "100-mile race · Main was $355 at booking · watching cash switch"
     },
     {
       "route": "DFW → SMF",
