@@ -78,11 +78,11 @@
       "dates": "Sep 24–28",
       "type": "reprice",
       "currentPrice": 237,
-      "buyTarget": 245,
-      "bookedPrice": null,
+      "buyTarget": 195,
+      "bookedPrice": 317,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked 25k miles + $11 (~1.38 cpp vs $355 Main at booking). 7/11 obs: AA nonstops $237 Basic floor, down from $275 — implies Main near ~$317, below the $325 switch line. Verify Main on AA.com; if < $325, cancel award (redeposits cleanly) and rebook cash."
+      "notes": "Booked $317 Main (7/12, switched from 25k-mile award — miles + $11 fees redeposited). Reprice via Change Flight if floor < ~$195 (≈ sub-$275 Main, ~$80 gap) — difference returns as trip credit."
     }
   ],
   "booked": [
@@ -139,8 +139,8 @@
       "route": "DFW ⇄ COS",
       "dates": "Sep 24–28",
       "sortDate": "2026-09-24",
-      "fare": "25k miles + $11 · ~1.38 cpp",
-      "notes": "100-mile race · Main was $355 at booking · watching cash switch"
+      "fare": "$317 · Main",
+      "notes": "100-mile race · switched from 25k award 7/12 (was ~1.2 cpp) · reprice watch < ~$275 Main"
     },
     {
       "route": "DFW → SMF",
