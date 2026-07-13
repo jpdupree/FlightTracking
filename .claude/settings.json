@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Expedia__search_flights",
+      "mcp__Expedia__search_hotels"
+    ]
+  }
+}
