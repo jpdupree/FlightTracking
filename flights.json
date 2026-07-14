@@ -9,7 +9,7 @@
       "bookedPrice": 349,
       "startChecking": "2026-07-10",
       "buyWindowEnd": "2026-08-04",
-      "notes": "Killington via Boston (AI conf). Booked $349 Main. 7/11 obs: AA nonstops $479 Basic floor — up 92% from $249 on 7/10; booking aged very well. Reprice if floor < ~$200 (≈ Main sub-$300)."
+      "notes": "Killington via Boston (AI conf). Booked $349 Main. 7/14 obs: AA nonstops $479 Basic floor (flat since 7/11). Reprice if floor < ~$200 (≈ Main sub-$300)."
     },
     {
       "route": "DFW ⇄ SEA",
@@ -19,7 +19,7 @@
       "buyTarget": 300,
       "startChecking": "2026-07-09",
       "buyWindowEnd": "2026-08-07",
-      "notes": "Ragnar Rainier. 7/11 obs: AS nonstops $357 Saver floor (AA $387, 1-stop out) — AS Main ran ~$100 over Saver on 7/10. Plan: buy Main < ~$380 by early Aug; Saver fallback if not. Trending up."
+      "notes": "Ragnar Rainier. 7/14 obs: AS nonstops $357 Saver floor (AA $394) — flat since 7/11; AS Main ~$100 over Saver. Plan: buy Main < ~$380 by early Aug; Saver-at-$322-style fallback if not."
     },
     {
       "route": "DFW ⇄ LHR",
@@ -49,7 +49,7 @@
       "buyTarget": 315,
       "startChecking": "2026-07-10",
       "buyWindowEnd": "2026-08-28",
-      "notes": "Booked $406 Main. 7/11 obs: AA and AS both $397 Basic/Saver floor — up 13% from $352 on 7/10. Reprice if floor < ~$315 (≈ sub-$365 Main).",
+      "notes": "Booked $406 Main. 7/14 obs: AS $397 Saver / AA $416 Basic floor — flat since 7/11. Reprice if floor < ~$315 (≈ sub-$365 Main).",
       "bookedPrice": 406
     },
     {
@@ -66,12 +66,12 @@
       "route": "CUN → TPA",
       "dates": "Nov 13",
       "type": "reprice",
-      "currentPrice": 218,
+      "currentPrice": 228,
       "buyTarget": 210,
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main. 7/11 obs: AA $218 Basic floor (unchanged). 7/10 check: Main only ~$9 under booking on long layovers — passed. Reprice if floor < ~$210 (≈ sub-$250 Main on comparable routing)."
+      "notes": "Booked $266 Main. 7/14 obs: AA $228 Basic floor, up slightly from $218. Reprice if floor < ~$210 (≈ sub-$250 Main on comparable routing)."
     },
     {
       "route": "DFW ⇄ COS",
@@ -82,7 +82,7 @@
       "bookedPrice": 317,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked $317 Main (7/12, switched from 25k-mile award — miles + $11 fees redeposited). Reprice via Change Flight if floor < ~$195 (≈ sub-$275 Main, ~$80 gap) — difference returns as trip credit."
+      "notes": "Booked $317 Main (7/12, switched from award). 7/14 obs: AA nonstops $237 Basic floor (flat). Reprice via Change Flight if floor < ~$195 (≈ sub-$275 Main)."
     }
   ],
   "booked": [
