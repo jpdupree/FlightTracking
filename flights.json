@@ -13,13 +13,14 @@
     },
     {
       "route": "DFW ⇄ SEA",
-      "dates": "Aug 19–23",
-      "type": "buy",
+      "dates": "Aug 20–23",
+      "type": "reprice",
       "currentPrice": 357,
-      "buyTarget": 300,
+      "buyTarget": 330,
       "startChecking": "2026-07-09",
       "buyWindowEnd": "2026-08-07",
-      "notes": "Ragnar Rainier. 7/16 obs: AS nonstops $357 Saver floor — flat for 5 days; AS Main ~$100 over Saver. Plan: buy Main < ~$380 by early Aug; Saver-at-~$357 fallback if not."
+      "notes": "Ragnar Rainier. Booked 32.5k miles + $11 (7/17, AA award on AS nonstops, ~1.5 cpp vs $497 Main). Switch to cash if Main < ~$430 (≈ floor < ~$330, $100 AS Saver gap) — award cancels and redeposits cleanly.",
+      "bookedPrice": null
     },
     {
       "route": "DFW ⇄ LHR",
@@ -183,6 +184,13 @@
       "sortDate": "2026-08-06",
       "fare": "$349 · Main",
       "notes": "Killington (AI conf) · nonstops · work from Boston Mon · reprice watch < ~$300 Main"
+    },
+    {
+      "route": "DFW ⇄ SEA",
+      "dates": "Aug 20–23",
+      "sortDate": "2026-08-20",
+      "fare": "32.5k miles + $11 · ~1.5 cpp",
+      "notes": "Ragnar Rainier · AS nonstops · watching cash switch < ~$430 Main"
     }
   ]
 }
