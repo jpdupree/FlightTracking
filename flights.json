@@ -30,7 +30,7 @@
       "buyTarget": null,
       "startChecking": "2026-12-07",
       "buyWindowEnd": "2027-05-21",
-      "notes": "Home from Morzine after Spartan Ultra World Champs (Jul 3, 50k format — done Saturday, Sunday to recover, fly Monday). BA via LHR or IB via MAD, oneworld. Trip plan: Eurostar London→Paris Jun 29, CDG car pickup, Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector."
+      "notes": "Home from Morzine after Spartan Ultra World Champs (Jul 3, 50k — done Saturday, Sunday to recover, fly Monday). BA via LHR or IB via MAD, oneworld. Trip plan: Eurostar London→Lille Jun 29, TGV to Reims, car pickup Reims (verify Avis GVA one-way drop; CDG fallback), Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector."
     },
     {
       "route": "DFW ⇄ ZRH",
@@ -94,6 +94,16 @@
       "startChecking": "2026-11-24",
       "buyWindowEnd": "2027-05-08",
       "notes": "One way to WTM 2027 (race weekend, UK). Award one-ways price clean; if paying cash, compare against the LHR/GVA open-jaw before buying two one-ways."
+    },
+    {
+      "route": "London → Reims (rail)",
+      "dates": "Jun 29, 2027",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": null,
+      "startChecking": "2026-10-01",
+      "buyWindowEnd": "2027-05-31",
+      "notes": "NOT a flight — booking reminder, no fare search. Eurostar London→Lille + TGV Lille→Reims; car pickup Reims (or CDG fallback). Trains and car are flexible/no-rush, but Eurostar prices climb like airfares — book when sales open (~Oct 2026, ~$60–90 cheap seats)."
     }
   ],
   "booked": [
