@@ -84,6 +84,16 @@
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
       "notes": "Booked $317 Main (7/12, switched from award). 7/14 obs (7/16 check skipped, connector down): AA nonstops $237 Basic floor (flat). Reprice via Change Flight if floor < ~$195 (≈ sub-$275 Main)."
+    },
+    {
+      "route": "DFW - LHR",
+      "dates": "June 22",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": null,
+      "startChecking": null,
+      "buyWindowEnd": null,
+      "notes": "One way to WTM"
     }
   ],
   "booked": [
