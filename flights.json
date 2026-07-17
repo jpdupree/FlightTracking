@@ -24,13 +24,13 @@
     },
     {
       "route": "GVA → DFW",
-      "dates": "~Jul 5, 2027",
+      "dates": "Jul 5, 2027",
       "type": "buy",
       "currentPrice": null,
       "buyTarget": null,
       "startChecking": "2026-12-07",
       "buyWindowEnd": "2027-05-21",
-      "notes": "Home from Morzine after Spartan Ultra World Champs (race Jul 3 — confirm if 24h format ends Jul 4; return Mon Jul 5 or Tue Jul 6). BA via LHR or IB via MAD, oneworld. Trip plan: Eurostar London→Paris Jun 29, CDG car pickup, Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector."
+      "notes": "Home from Morzine after Spartan Ultra World Champs (Jul 3, 50k format — done Saturday, Sunday to recover, fly Monday). BA via LHR or IB via MAD, oneworld. Trip plan: Eurostar London→Paris Jun 29, CDG car pickup, Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector."
     },
     {
       "route": "DFW ⇄ ZRH",
