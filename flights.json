@@ -23,14 +23,14 @@
       "bookedPrice": null
     },
     {
-      "route": "DFW ⇄ LHR",
+      "route": "DFW → LHR ⋯ GVA → DFW",
       "dates": "Jun 22 – Jul 6, 2027",
       "type": "buy",
       "currentPrice": null,
       "buyTarget": 1200,
       "startChecking": "2026-12-15",
       "buyWindowEnd": "2027-04-30",
-      "notes": "World's Toughest Mudder 2027. Target unverified — validate against live market."
+      "notes": "World's Toughest Mudder 2027, then Morzine (Spartan Ultra World Champs) the week after. Price as open-jaw: DFW–LHR out, GVA–DFW home; position LHR→GVA on BA (~$60–120) or Eurostar. Rent round-trip at GVA French sector for Morzine (no one-way fee, no vignette). Target unverified."
     },
     {
       "route": "DFW ⇄ ZRH",
