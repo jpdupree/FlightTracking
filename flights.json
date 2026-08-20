@@ -288,9 +288,9 @@
         {
           "ap": "DFW",
           "name": "Admirals Club",
-          "loc": "Term A 4a / C 5a",
+          "loc": "Term C · 5:00a",
           "ok": true,
-          "note": "Alaska departs Terminal E — but the Terminal E club opens 6:00 AM, after your 6:20 AM flight. Skylink to Terminal A (opens 4:00 AM) or Terminal C (5:00 AM) instead. Allow ~10 min each way; be through security by ~5:00 for a real sit-down."
+          "note": "Bag drop Terminal E, then Skylink one stop to the Terminal C club (opens 5:00 AM) — Terminal E's own club opens 6:00 AM, after the 6:20 departure. Skylink is airside and runs 24/7. Bag cutoff 5:30. Leave C by ~5:40 to make boarding."
         },
         {
           "ap": "SEA",
@@ -318,9 +318,9 @@
         {
           "ap": "DFW",
           "name": "Admirals Club",
-          "loc": "Term A 4a / C 5a",
+          "loc": "Term C · 5:00a",
           "ok": true,
-          "note": "Alaska departs Terminal E — but the Terminal E club opens 6:00 AM, after your 6:20 AM flight. Skylink to Terminal A (opens 4:00 AM) or Terminal C (5:00 AM) instead. Allow ~10 min each way; be through security by ~5:00 for a real sit-down."
+          "note": "Bag drop Terminal E, then Skylink one stop to the Terminal C club (opens 5:00 AM) — Terminal E's own club opens 6:00 AM, after the 6:20 departure. Skylink is airside and runs 24/7. Bag cutoff 5:30. Leave C by ~5:40 to make boarding."
         },
         {
           "ap": "SEA",
