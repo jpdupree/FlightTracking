@@ -247,11 +247,11 @@
           "note": "No Admirals Club or oneworld lounge at Cancun — nothing the card or status can open. Only paid/Priority Pass lounges, and that Priority Pass is dead."
         },
         {
-          "ap": "?",
-          "name": "Connection — club likely",
-          "loc": "routing unconfirmed",
+          "ap": "MIA",
+          "name": "Admirals Club ×2",
+          "loc": "D30 5a · D15 5:30a",
           "ok": true,
-          "note": "Actual routing of the booked $266 fare not confirmed. Every plausible AA connection for CUN-TPA (CLT, MIA, DFW, PHL) has an Admirals Club. Confirm the itinerary to pin this down."
+          "note": "Concourse D, both post-security: D30 (5 AM–10:30 PM, showers) and D15 (5:30 AM–10:30 PM). Clear immigration and customs first, then re-enter security — budget that time before counting on the lounge. The MIA Flagship Lounge is NOT available: North American itinerary."
         },
         {
           "ap": "TPA",
