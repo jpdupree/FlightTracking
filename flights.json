@@ -216,13 +216,20 @@
           "ap": "SMF",
           "name": "No lounge",
           "ok": false,
-          "note": "No Admirals Club, no Alaska Lounge."
+          "note": "Sacramento has no Admirals Club and no Alaska Lounge."
+        },
+        {
+          "ap": "PHX",
+          "name": "Admirals Club ×3",
+          "loc": "T4 · A19–21 opens 3:30a",
+          "ok": true,
+          "note": "Three clubs in Terminal 4: between A19–A21 (3:30 AM–9 PM, earliest), above A7/A9 (5:30 AM–11:30 PM), above B5/B7 (5:30 AM–9 PM). Pick by gate."
         },
         {
           "ap": "CUN",
           "name": "No lounge",
           "ok": false,
-          "note": "Cancun has no Admirals Club and no oneworld lounge at all — only paid / Priority Pass lounges, and your Priority Pass is dead."
+          "note": "Arrival. No Admirals Club or oneworld lounge at Cancun."
         }
       ]
     },

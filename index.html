@@ -519,9 +519,16 @@ function paint(data) {
   document.getElementById("watch-count").textContent =
     watches.filter(x => x.s.rank === 1).length + " actionable · " + watches.length + " total";
 
+  // Upcoming block first, soonest departure at the top; flown block after it,
+  // most recently flown first — so both halves read outward from today.
   const booked = data.booked
     .map((b, i) => ({ b, i }))
-    .sort((a, b) => parseISO(a.b.sortDate) - parseISO(b.b.sortDate));
+    .sort((a, b) => {
+      const da = parseISO(a.b.sortDate), db = parseISO(b.b.sortDate);
+      const ua = da >= today, ub = db >= today;
+      if (ua !== ub) return ua ? -1 : 1;
+      return ua ? da - db : db - da;
+    });
   document.getElementById("booked").innerHTML = booked.map(({b, i}) => bookedRow(b, today, i)).join("");
   const upcoming = booked.filter(({b}) => parseISO(b.sortDate) >= today).length;
   document.getElementById("booked-count").textContent = upcoming + " upcoming · " + booked.length + " total";
