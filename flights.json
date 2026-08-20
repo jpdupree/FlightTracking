@@ -50,7 +50,23 @@
       "buyTarget": 400,
       "startChecking": "2026-08-07",
       "buyWindowEnd": "2026-09-25",
-      "notes": "First obs 8/7 (window opened today): AA $534 Basic on an awful 2-stop 12h39 outbound (6h AUS layover); nonstops both ways $590 Basic, ~$650+ Main. Steep for a 3h flight — target $280 was unrealistic. Retarget: nonstop Basic floor < ~$400 (≈ Main sub-$470). Window to 9/25."
+      "notes": "First obs 8/7 (window opened today): AA $534 Basic on an awful 2-stop 12h39 outbound (6h AUS layover); nonstops both ways $590 Basic, ~$650+ Main. Steep for a 3h flight — target $280 was unrealistic. Retarget: nonstop Basic floor < ~$400 (≈ Main sub-$470). Window to 9/25.",
+      "lounges": [
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "A/B/C/D",
+          "ok": true,
+          "note": "Admirals Club membership (Citi Exec)."
+        },
+        {
+          "ap": "YYZ",
+          "name": "Admirals Club",
+          "loc": "T3 transfer lvl",
+          "ok": true,
+          "note": "One of only seven Admirals Clubs outside the US. Open 05:00–19:30 — the 6:21 PM nonstop return still clears it."
+        }
+      ]
     },
     {
       "route": "CUN → TPA",
@@ -150,42 +166,140 @@
       "dates": "Sep 24–28",
       "sortDate": "2026-09-24",
       "fare": "$317 · Main",
-      "notes": "100-mile race · switched from 25k award 7/12 (was ~1.2 cpp) · reprice watch < ~$275 Main"
+      "notes": "100-mile race · switched from 25k award 7/12 (was ~1.2 cpp) · reprice watch < ~$275 Main",
+      "lounges": [
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "A/B/C/D",
+          "ok": true,
+          "note": "Admirals Club membership (Citi Exec)."
+        },
+        {
+          "ap": "COS",
+          "name": "No lounge",
+          "ok": false,
+          "note": "Colorado Springs has no Admirals Club and no oneworld partner lounge."
+        }
+      ]
     },
     {
       "route": "DFW → SMF",
       "dates": "Nov 6",
       "sortDate": "2026-11-06",
       "fare": "9.5k miles · ~2.45 cpp",
-      "notes": ""
+      "notes": "",
+      "lounges": [
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "A/B/C/D",
+          "ok": true,
+          "note": "Admirals Club membership (Citi Exec)."
+        },
+        {
+          "ap": "SMF",
+          "name": "No lounge",
+          "ok": false,
+          "note": "Sacramento has no Admirals Club and no Alaska Lounge."
+        }
+      ]
     },
     {
       "route": "SMF → CUN",
       "dates": "Nov 9",
       "sortDate": "2026-11-09",
       "fare": "11k miles · ~3.2 cpp",
-      "notes": "Excellent redemption"
+      "notes": "Excellent redemption",
+      "lounges": [
+        {
+          "ap": "SMF",
+          "name": "No lounge",
+          "ok": false,
+          "note": "No Admirals Club, no Alaska Lounge."
+        },
+        {
+          "ap": "CUN",
+          "name": "No lounge",
+          "ok": false,
+          "note": "Cancun has no Admirals Club and no oneworld lounge at all — only paid / Priority Pass lounges, and your Priority Pass is dead."
+        }
+      ]
     },
     {
       "route": "CUN → TPA",
       "dates": "Nov 13",
       "sortDate": "2026-11-13",
       "fare": "$266 · Main",
-      "notes": "Reprice watch < $250"
+      "notes": "Reprice watch < $250",
+      "lounges": [
+        {
+          "ap": "CUN",
+          "name": "No lounge",
+          "ok": false,
+          "note": "No Admirals Club or oneworld lounge at Cancun. Nothing your card or status can open."
+        },
+        {
+          "ap": "CLT",
+          "name": "Admirals Club",
+          "loc": "Conc. B + E",
+          "ok": true,
+          "note": "2h18 layover — the best lounge stop of this whole trip. Two clubs, Concourses B and E."
+        },
+        {
+          "ap": "TPA",
+          "name": "Admirals Club",
+          "loc": "airside F",
+          "ok": true,
+          "note": "Arrival access counts — AA admits members on arriving flights too."
+        }
+      ]
     },
     {
       "route": "TPA → DFW",
       "dates": "Nov 14",
       "sortDate": "2026-11-14",
       "fare": "$279 · Main",
-      "notes": "Evening nonstop required"
+      "notes": "Evening nonstop required",
+      "lounges": [
+        {
+          "ap": "TPA",
+          "name": "Admirals Club",
+          "loc": "airside F",
+          "ok": true,
+          "note": "Admirals Club membership (Citi Exec)."
+        },
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "A/B/C/D",
+          "ok": true,
+          "note": "Arrival access counts."
+        }
+      ]
     },
     {
       "route": "DFW ⇄ SEA",
       "dates": "Sep 18–20",
       "sortDate": "2026-09-18",
       "fare": "$406 · Main",
-      "notes": "Reprice watch < ~$365 Main"
+      "notes": "Reprice watch < ~$365 Main",
+      "lounges": [
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "Term A 4a / C 5a",
+          "ok": true,
+          "note": "Alaska departs Terminal E — but the Terminal E club opens 6:00 AM, after your 6:20 AM flight. Skylink to Terminal A (opens 4:00 AM) or Terminal C (5:00 AM) instead. Allow ~10 min each way; be through security by ~5:00 for a real sit-down."
+        },
+        {
+          "ap": "SEA",
+          "name": "Alaska Lounge",
+          "loc": "C16 · D1 · N Sat",
+          "ok": true,
+          "note": "Admirals Club membership admits. 5:56 PM return — C closes 7 PM, D and N run to 11 PM."
+        }
+      ]
     },
     {
       "route": "DFW ⇄ BOS",
@@ -199,7 +313,23 @@
       "dates": "Aug 20–23",
       "sortDate": "2026-08-20",
       "fare": "32.5k miles + $11 · ~1.5 cpp",
-      "notes": "Ragnar Rainier · AS nonstops · race done Sat midday, 6am Sun return by design · watching cash switch < ~$430 Main"
+      "notes": "Ragnar Rainier · AS nonstops · race done Sat midday, 6am Sun return by design · watching cash switch < ~$430 Main",
+      "lounges": [
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "Term A 4a / C 5a",
+          "ok": true,
+          "note": "Alaska departs Terminal E — but the Terminal E club opens 6:00 AM, after your 6:20 AM flight. Skylink to Terminal A (opens 4:00 AM) or Terminal C (5:00 AM) instead. Allow ~10 min each way; be through security by ~5:00 for a real sit-down."
+        },
+        {
+          "ap": "SEA",
+          "name": "Alaska Lounge",
+          "loc": "C16 · D1 · N Sat",
+          "ok": true,
+          "note": "Admirals Club membership admits you to Alaska Lounges. All three open 5:00 AM — your 6 AM Sun return works, but it is tight."
+        }
+      ]
     }
   ]
 }
