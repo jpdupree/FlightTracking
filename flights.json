@@ -1,17 +1,6 @@
 {
   "watches": [
     {
-      "route": "DFW ⇄ SEA",
-      "dates": "Aug 20–23",
-      "type": "reprice",
-      "currentPrice": 553,
-      "buyTarget": 330,
-      "startChecking": "2026-07-09",
-      "buyWindowEnd": "2026-08-07",
-      "notes": "Ragnar Rainier. Booked 32.5k miles + $11 (award on AS nonstops). 8/7 obs: AS nonstops $553 Saver floor — up 29% from $430; Main ~$650. Award now ~2.0 cpp and climbing. Window closed 8/7 — holding the award, no switch.",
-      "bookedPrice": null
-    },
-    {
       "route": "GVA → DFW",
       "dates": "Jul 5, 2027",
       "type": "buy",
@@ -35,22 +24,22 @@
       "route": "DFW ⇄ SEA",
       "dates": "Sep 18–20",
       "type": "reprice",
-      "currentPrice": 417,
+      "currentPrice": 390,
       "buyTarget": 315,
       "startChecking": "2026-07-10",
       "buyWindowEnd": "2026-08-28",
-      "notes": "Booked $406 Main. 8/7 obs: AS $417 Saver floor on nonstops, up 5% from $397 — booking now at/under market. Reprice if floor < ~$315 (≈ sub-$365 Main).",
+      "notes": "Booked $406 Main. 8/21 obs: AS $390 Saver floor on nonstops, down 6% from $417 — booking back to roughly market. Reprice if floor < ~$315 (≈ sub-$365 Main).",
       "bookedPrice": 406
     },
     {
       "route": "DFW ⇄ YYZ",
       "dates": "Oct 16–18",
       "type": "buy",
-      "currentPrice": 534,
+      "currentPrice": 573,
       "buyTarget": 400,
       "startChecking": "2026-08-07",
       "buyWindowEnd": "2026-09-25",
-      "notes": "First obs 8/7 (window opened today): AA $534 Basic on an awful 2-stop 12h39 outbound (6h AUS layover); nonstops both ways $590 Basic, ~$650+ Main. Steep for a 3h flight — target $280 was unrealistic. Retarget: nonstop Basic floor < ~$400 (≈ Main sub-$470). Window to 9/25.",
+      "notes": "8/21 obs: AA nonstops $573 Basic (down from $590); Main ~$650+. NOTE: currentPrice now tracks the NONSTOP floor to match the target basis — the prior $534 was a 2-stop 12h39 routing, so this is not a price rise. Target: nonstop Basic < ~$400 (≈ Main sub-$470). Window to 9/25.",
       "lounges": [
         {
           "ap": "DFW",
@@ -72,23 +61,23 @@
       "route": "CUN → TPA",
       "dates": "Nov 13",
       "type": "reprice",
-      "currentPrice": 250,
+      "currentPrice": 213,
       "buyTarget": 210,
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main. 8/7 obs: AA $250 Basic floor (2h18 CLT routing), up from $233. Reprice if floor < ~$210."
+      "notes": "Booked $266 Main (CUN–MIA–TPA). 8/21 obs: AA $213 Basic floor via MIA (3h33 layover, lands 12:12 AM) — down 15% from $250 and only $3 above the $210 reprice line. Closest this has come. Reprice if floor < ~$210."
     },
     {
       "route": "DFW ⇄ COS",
       "dates": "Sep 24–28",
       "type": "reprice",
-      "currentPrice": 323,
+      "currentPrice": 307,
       "buyTarget": 195,
       "bookedPrice": 317,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked $317 Main (7/12, switched from award). 8/7 obs: AA nonstops $323 Basic floor, up 6% — booking now under the Basic floor, Main well above. Reprice if floor < ~$195."
+      "notes": "Booked $317 Main (7/12, switched from award). 8/21 obs: AA nonstops $307 Basic floor, down 5% from $323. Booking still under the Basic floor. Reprice if floor < ~$195."
     },
     {
       "route": "DFW - LHR",
@@ -320,7 +309,7 @@
       "dates": "Aug 20–23",
       "sortDate": "2026-08-20",
       "fare": "32.5k miles + $11 · ~1.5 cpp",
-      "notes": "Ragnar Rainier · AS nonstops · race done Sat midday, 6am Sun return by design · watching cash switch < ~$430 Main",
+      "notes": "Ragnar Rainier · AS nonstops · in progress Aug 20–23 · held the 32.5k award; cash hit $553 Saver / ~$650 Main by departure (~2.0 cpp)",
       "lounges": [
         {
           "ap": "DFW",
