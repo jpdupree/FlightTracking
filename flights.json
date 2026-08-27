@@ -28,18 +28,18 @@
       "buyTarget": 315,
       "startChecking": "2026-07-10",
       "buyWindowEnd": "2026-08-28",
-      "notes": "Booked $406 Main. 8/23 obs: AS $420 Saver floor on nonstops, up 8% from $390 — booking sits just under the Basic floor. Reprice if floor < ~$315 (≈ sub-$365 Main).",
+      "notes": "Booked $406 Main. 8/27 obs: AS $420 Saver floor on nonstops, flat vs 8/23. Window closes 8/28 having never approached the $315 line — floor never dropped below $390 in seven weeks of tracking. Booking at $406 Main held up well.",
       "bookedPrice": 406
     },
     {
       "route": "DFW ⇄ YYZ",
       "dates": "Oct 16–18",
       "type": "buy",
-      "currentPrice": 574,
+      "currentPrice": 573,
       "buyTarget": 400,
       "startChecking": "2026-08-07",
       "buyWindowEnd": "2026-09-25",
-      "notes": "8/23 obs: AA nonstops $574 Basic, flat vs $573. Main ~$650+. Tracks the NONSTOP floor to match the target basis. Target: nonstop Basic < ~$400 (≈ Main sub-$470). Window to 9/25 — four weeks left, no movement yet.",
+      "notes": "8/27 obs: AA nonstops $573 Basic — flat for a week ($573/$574/$573); Main ~$650+. No sign of movement toward the $400 target. Window closes 9/25. Decision approaching: book near $573, use miles, or drop the trip.",
       "lounges": [
         {
           "ap": "DFW",
@@ -66,18 +66,18 @@
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main (CUN–MIA–TPA). 8/23 obs: AA $213 Basic floor, flat at the same price for 2 days but now routed via CLT (2h13, lands 12:18 AM) rather than MIA (3h33). Holding $3 above the $210 reprice line. Note both cheap routings arrive after midnight."
+      "notes": "Booked $266 Main (CUN–MIA–TPA). 8/27 obs: AA $213 Basic floor — pinned at this exact price for a week, but the routing behind it has degraded to a 9h22 MIA layover (12h24 door to door). Still $3 above the $210 line. Even if it triggers, the itinerary is now clearly worse than the booking."
     },
     {
       "route": "DFW ⇄ COS",
       "dates": "Sep 24–28",
       "type": "reprice",
-      "currentPrice": 277,
+      "currentPrice": 339,
       "buyTarget": 195,
       "bookedPrice": 317,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked $317 Main (7/12, switched from award). 8/23 obs: AA nonstops $277 Basic floor, down 10% from $307 — softening but Main still ~$310–355, above the booking. Reprice if floor < ~$195 (≈ sub-$275 Main)."
+      "notes": "Booked $317 Main (7/12, switched from award). 8/27 obs: AA nonstops $339 Basic floor, up 22% from $277 — a sharp reversal; the $277 dip lasted days. Booking now below the Basic floor outright. Reprice if floor < ~$195 (≈ sub-$275 Main)."
     },
     {
       "route": "DFW - LHR",
