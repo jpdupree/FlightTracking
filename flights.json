@@ -21,32 +21,6 @@
       "notes": "Swiss Alps 100. Target unverified — validate against live market."
     },
     {
-      "route": "DFW ⇄ YYZ",
-      "dates": "Oct 16–18",
-      "type": "buy",
-      "currentPrice": 530,
-      "buyTarget": 400,
-      "startChecking": "2026-08-07",
-      "buyWindowEnd": "2026-09-25",
-      "notes": "Cash, not miles. 9/2 obs: AA nonstops $530 Basic floor (down 7% from $573); Main est. ~$560-610 — exact Main not quotable via Expedia, check aa.com. MUST BOOK MAIN if buying to reprice later: Basic is CHANGES_NOT_ALLOWED and also forfeits Platinum Pro upgrade eligibility on this short-haul international route, plus seat selection. Reprice returns AA trip credit, not cash. Target: nonstop Basic < ~$400 (≈ Main sub-$470). Window closes 9/25.",
-      "lounges": [
-        {
-          "ap": "DFW",
-          "name": "Admirals Club",
-          "loc": "A/B/C/D",
-          "ok": true,
-          "note": "Admirals Club membership (Citi Exec)."
-        },
-        {
-          "ap": "YYZ",
-          "name": "Admirals Club",
-          "loc": "T3 transfer lvl",
-          "ok": true,
-          "note": "One of only seven Admirals Clubs outside the US. Open 05:00–19:30 — the 6:21 PM nonstop return still clears it."
-        }
-      ]
-    },
-    {
       "route": "CUN → TPA",
       "dates": "Nov 13",
       "type": "reprice",
@@ -87,6 +61,33 @@
       "startChecking": "2026-10-01",
       "buyWindowEnd": "2027-05-31",
       "notes": "NOT a flight — booking reminder, no fare search. Eurostar London→Lille + TGV Lille→Reims; car pickup Reims (or CDG fallback). Trains and car are flexible/no-rush, but Eurostar prices climb like airfares — book when sales open (~Oct 2026, ~$60–90 cheap seats)."
+    },
+    {
+      "route": "DFW ⇄ YYZ",
+      "dates": "Oct 16–17",
+      "type": "reprice",
+      "currentPrice": 530,
+      "buyTarget": 455,
+      "bookedPrice": 636,
+      "startChecking": "2026-09-02",
+      "buyWindowEnd": "2026-10-02",
+      "notes": "Ticketed 9/2 at $636 Main ($497 net after $139 AA credit). Basic floor $530 at booking; Basic↔Main spread on this route is ~$106. Reprice if Basic floor < ~$455 (≈ Main sub-$560, ~$76+ back). Difference returns as AA trip credit, not cash. Main keeps Change Flight and Platinum Pro upgrade eligibility.",
+      "lounges": [
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "A/B/C/D",
+          "ok": true,
+          "note": "Admirals Club membership (Citi Exec). 6:39 PM departure — all DFW clubs open."
+        },
+        {
+          "ap": "YYZ",
+          "name": "Admirals Club",
+          "loc": "T3 transfer lvl",
+          "ok": true,
+          "note": "One of only seven Admirals Clubs outside the US. Open 05:00–19:30 — the 6:21 PM return clears it, but not by much. Arrive with time."
+        }
+      ]
     }
   ],
   "booked": [
@@ -313,6 +314,29 @@
           "loc": "C16 · D1 · N Sat",
           "ok": true,
           "note": "Admirals Club membership admits you to Alaska Lounges. All three open 5:00 AM — your 6 AM Sun return works, but it is tight."
+        }
+      ]
+    },
+    {
+      "route": "DFW ⇄ YYZ",
+      "dates": "Oct 16–17",
+      "sortDate": "2026-10-16",
+      "fare": "$636 · Main · $139 credit applied ($497 net)",
+      "notes": "AA 2804 out 6:39 PM / AA 1111 back 6:21 PM · nonstops · Main for reprice + upgrade eligibility · declined +$91 refundable · reprice watch < ~$560 Main",
+      "lounges": [
+        {
+          "ap": "DFW",
+          "name": "Admirals Club",
+          "loc": "A/B/C/D",
+          "ok": true,
+          "note": "Admirals Club membership (Citi Exec). 6:39 PM departure — all DFW clubs open."
+        },
+        {
+          "ap": "YYZ",
+          "name": "Admirals Club",
+          "loc": "T3 transfer lvl",
+          "ok": true,
+          "note": "One of only seven Admirals Clubs outside the US. Open 05:00–19:30 — the 6:21 PM return clears it, but not by much. Arrive with time."
         }
       ]
     }
