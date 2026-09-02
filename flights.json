@@ -21,25 +21,14 @@
       "notes": "Swiss Alps 100. Target unverified — validate against live market."
     },
     {
-      "route": "DFW ⇄ SEA",
-      "dates": "Sep 18–20",
-      "type": "reprice",
-      "currentPrice": 420,
-      "buyTarget": 315,
-      "startChecking": "2026-07-10",
-      "buyWindowEnd": "2026-08-28",
-      "notes": "Booked $406 Main. 8/27 obs: AS $420 Saver floor on nonstops, flat vs 8/23. Window closes 8/28 having never approached the $315 line — floor never dropped below $390 in seven weeks of tracking. Booking at $406 Main held up well.",
-      "bookedPrice": 406
-    },
-    {
       "route": "DFW ⇄ YYZ",
       "dates": "Oct 16–18",
       "type": "buy",
-      "currentPrice": 573,
+      "currentPrice": 530,
       "buyTarget": 400,
       "startChecking": "2026-08-07",
       "buyWindowEnd": "2026-09-25",
-      "notes": "8/27 obs: AA nonstops $573 Basic — flat for a week ($573/$574/$573); Main ~$650+. No sign of movement toward the $400 target. Window closes 9/25. Decision approaching: book near $573, use miles, or drop the trip.",
+      "notes": "9/2 obs: AA nonstops $530 Basic — first real move, down 7% from $573 after a week flat. Main ~$610+. Still $130 above the $400 target with the window closing 9/25. Tracks the NONSTOP floor.",
       "lounges": [
         {
           "ap": "DFW",
@@ -61,12 +50,12 @@
       "route": "CUN → TPA",
       "dates": "Nov 13",
       "type": "reprice",
-      "currentPrice": 213,
+      "currentPrice": 217,
       "buyTarget": 210,
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main (CUN–MIA–TPA). 8/27 obs: AA $213 Basic floor — pinned at this exact price for a week, but the routing behind it has degraded to a 9h22 MIA layover (12h24 door to door). Still $3 above the $210 line. Even if it triggers, the itinerary is now clearly worse than the booking."
+      "notes": "Booked $266 Main (CUN–MIA–TPA). 9/2 obs: AA $217 Basic floor, up $4 and back on the better CLT routing (2h13, lands 12:18 AM). Drifting away from the $210 line. Treat $210 as necessary-not-sufficient — only worth repricing if the routing is also sane."
     },
     {
       "route": "DFW ⇄ COS",
@@ -77,7 +66,7 @@
       "bookedPrice": 317,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked $317 Main (7/12, switched from award). 8/27 obs: AA nonstops $339 Basic floor, up 22% from $277 — a sharp reversal; the $277 dip lasted days. Booking now below the Basic floor outright. Reprice if floor < ~$195 (≈ sub-$275 Main)."
+      "notes": "Booked $317 Main (7/12, switched from award). 9/2 obs: AA nonstops $339 Basic floor, flat vs 8/27 — the $277 dip has not returned. Booking sits below the Basic floor. Window closes 9/17. Reprice if floor < ~$195."
     },
     {
       "route": "DFW - LHR",
@@ -279,7 +268,7 @@
       "dates": "Sep 18–20",
       "sortDate": "2026-09-18",
       "fare": "$406 · Main",
-      "notes": "Reprice watch < ~$365 Main",
+      "notes": "Reprice watch closed 8/28 untriggered · floor never fell below $390 vs a $315 line · $406 Main held up",
       "lounges": [
         {
           "ap": "DFW",
