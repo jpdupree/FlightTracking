@@ -29,18 +29,18 @@
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main (CUN–MIA–TPA). 9/2 obs: AA $217 Basic floor, up $4 and back on the better CLT routing (2h13, lands 12:18 AM). Drifting away from the $210 line. Treat $210 as necessary-not-sufficient — only worth repricing if the routing is also sane."
+      "notes": "Booked $266 Main (CUN–MIA–TPA). 9/9 obs: AA $217 Basic floor via CLT (2h13, lands 12:18 AM) — unchanged for a week. Sitting $7 above the $210 line and not moving. Treat $210 as necessary-not-sufficient; only reprice if routing is also sane."
     },
     {
       "route": "DFW ⇄ COS",
       "dates": "Sep 24–28",
       "type": "reprice",
-      "currentPrice": 339,
+      "currentPrice": 481,
       "buyTarget": 195,
       "bookedPrice": 317,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-09-17",
-      "notes": "Booked $317 Main (7/12, switched from award). 9/2 obs: AA nonstops $339 Basic floor, flat vs 8/27 — the $277 dip has not returned. Booking sits below the Basic floor. Window closes 9/17. Reprice if floor < ~$195."
+      "notes": "Booked $317 Main (7/12, switched from award). 9/9 obs: AA nonstops $481 Basic floor, up 42% from $339 — fares firming hard inside three weeks of departure. Booking now far below market. Window closes 9/17; will expire untriggered, which is the good outcome."
     },
     {
       "route": "DFW - LHR",
@@ -66,12 +66,12 @@
       "route": "DFW ⇄ YYZ",
       "dates": "Oct 16–17",
       "type": "reprice",
-      "currentPrice": 530,
+      "currentPrice": 517,
       "buyTarget": 455,
       "bookedPrice": 636,
       "startChecking": "2026-09-02",
       "buyWindowEnd": "2026-10-02",
-      "notes": "Ticketed 9/2 at $636 Main ($497 net after $139 AA credit). Basic floor $530 at booking; Basic↔Main spread on this route is ~$106. Reprice if Basic floor < ~$455 (≈ Main sub-$560, ~$76+ back). Difference returns as AA trip credit, not cash. Main keeps Change Flight and Platinum Pro upgrade eligibility.",
+      "notes": "REPRICE AVAILABLE. Ticketed $636 Main. 9/9 obs: your exact itinerary (AA2804 6:39p out + AA1111 6:21p back) now $576 Main = $60 back — just above the $560 line. BUT keeping the same 6:21p return and moving the outbound earlier prices at $517 Main = $119 back: AA1111 1:18p (arr 5:24p) or AA1993 9:41a (arr 1:49p). Cheaper bucket also drops 1st bag $110→$55. Change Flight on aa.com; difference returns as trip credit.",
       "lounges": [
         {
           "ap": "DFW",
