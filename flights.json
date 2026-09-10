@@ -71,7 +71,7 @@
       "bookedPrice": 636,
       "startChecking": "2026-09-02",
       "buyWindowEnd": "2026-10-02",
-      "notes": "REPRICE AVAILABLE. Ticketed $636 Main. 9/9 obs: your exact itinerary (AA2804 6:39p out + AA1111 6:21p back) now $576 Main = $60 back — just above the $560 line. BUT keeping the same 6:21p return and moving the outbound earlier prices at $517 Main = $119 back: AA1111 1:18p (arr 5:24p) or AA1993 9:41a (arr 1:49p). Cheaper bucket also drops 1st bag $110→$55. Change Flight on aa.com; difference returns as trip credit.",
+      "notes": "Ticketed $636 Main on aa.com. 9/10: Expedia shows $517 Main (1:18p out) / $576 (your 6:39p out), unchanged from 9/9 — but aa.com Change Flight quotes HIGHER, so no reprice is actually available. CAVEAT: Expedia prices are NOT comparable to an aa.com-purchased ticket — different channel, different fare inventory. Expedia is a screening signal only; validate any trigger on aa.com before acting. Trigger stays Main sub-$560 but must be confirmed in the AA change flow.",
       "lounges": [
         {
           "ap": "DFW",
