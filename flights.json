@@ -29,7 +29,7 @@
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main (CUN–MIA–TPA). 9/9 obs: AA $217 Basic floor via CLT (2h13, lands 12:18 AM) — unchanged for a week. Sitting $7 above the $210 line and not moving. Treat $210 as necessary-not-sufficient; only reprice if routing is also sane."
+      "notes": "Booked $266 Main (CUN–MIA–TPA). 9/9 obs: AA $217 Basic floor via CLT (2h13, lands 12:18 AM) — unchanged for a week. Sitting $7 above the $210 line and not moving. Treat $210 as necessary-not-sufficient; only reprice if routing is also sane. CAVEAT: this target is calibrated off Expedia Basic floors, which the 9/10 YYZ episode showed can misstate both channel and fare class. Confirm on aa.com before acting."
     },
     {
       "route": "DFW ⇄ COS",
@@ -67,11 +67,11 @@
       "dates": "Oct 16–17",
       "type": "reprice",
       "currentPrice": 664,
-      "buyTarget": 455,
+      "buyTarget": 610,
       "bookedPrice": 636,
       "startChecking": "2026-09-02",
       "buyWindowEnd": "2026-10-02",
-      "notes": "Ticketed $636 Main on aa.com (AA2804 6:39p out, arr 10:47p / AA1111 6:21p back). 9/10 AA change flow: moving to the 1:18p AA1111 outbound costs +$28 (tiers +$28 / +$96 / +$286) — i.e. NO reprice available; AA prices the change UP. Expedia showed $517 for the same flights, a ~$147 gap — Expedia fares are a different channel and do not apply to an aa.com ticket. LESSON: screen on Expedia, but only aa.com Change Flight is authoritative. Optional: +$28 buys a 5:24p arrival instead of 10:47p (a usable Friday evening) — a purchase, not a saving.",
+      "notes": "Ticketed $636 Main on aa.com (AA2804 6:39p / AA1111 6:21p). 9/10 aa.com direct: Basic $538 · MAIN $664 · Business $1,103 — you are $28 UNDER current market, which is exactly the +$28 the change flow quoted. No reprice available and none expected. NOW TRACKING aa.com MAIN directly (not an Expedia proxy). Reprice when aa.com Main < ~$610 (~$26+ back as trip credit; Main changes are fee-free so any drop under $636 is worth taking). Expedia proved unusable here: it labeled a $517 fare MAIN CABIN, below aa.com's own $538 Basic — its fare classes do not map to AA products. Real aa.com spread: Basic->Main = $126.",
       "lounges": [
         {
           "ap": "DFW",
