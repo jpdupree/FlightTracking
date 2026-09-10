@@ -66,12 +66,12 @@
       "route": "DFW ⇄ YYZ",
       "dates": "Oct 16–17",
       "type": "reprice",
-      "currentPrice": 517,
+      "currentPrice": 664,
       "buyTarget": 455,
       "bookedPrice": 636,
       "startChecking": "2026-09-02",
       "buyWindowEnd": "2026-10-02",
-      "notes": "Ticketed $636 Main on aa.com. 9/10: Expedia shows $517 Main (1:18p out) / $576 (your 6:39p out), unchanged from 9/9 — but aa.com Change Flight quotes HIGHER, so no reprice is actually available. CAVEAT: Expedia prices are NOT comparable to an aa.com-purchased ticket — different channel, different fare inventory. Expedia is a screening signal only; validate any trigger on aa.com before acting. Trigger stays Main sub-$560 but must be confirmed in the AA change flow.",
+      "notes": "Ticketed $636 Main on aa.com (AA2804 6:39p out, arr 10:47p / AA1111 6:21p back). 9/10 AA change flow: moving to the 1:18p AA1111 outbound costs +$28 (tiers +$28 / +$96 / +$286) — i.e. NO reprice available; AA prices the change UP. Expedia showed $517 for the same flights, a ~$147 gap — Expedia fares are a different channel and do not apply to an aa.com ticket. LESSON: screen on Expedia, but only aa.com Change Flight is authoritative. Optional: +$28 buys a 5:24p arrival instead of 10:47p (a usable Friday evening) — a purchase, not a saving.",
       "lounges": [
         {
           "ap": "DFW",
