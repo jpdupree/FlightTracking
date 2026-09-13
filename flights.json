@@ -18,7 +18,17 @@
       "buyTarget": 1300,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-06-01",
-      "notes": "Swiss Alps 100. Target unverified — validate against live market."
+      "notes": "Swiss Alps 100. Wed Aug 11 return. Paired with the Aug 4–14 row for a head-to-head on return date. Target unverified — validate against live market when checking opens 1/15/27."
+    },
+    {
+      "route": "DFW ⇄ ZRH",
+      "dates": "Aug 4–14, 2027",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": 1300,
+      "startChecking": "2027-01-15",
+      "buyWindowEnd": "2027-06-01",
+      "notes": "Swiss Alps 100 — longer-stay alternative to the Aug 4–11 row (Sat Aug 14 return vs Wed Aug 11). Window mirrors the sibling watch so the two price head-to-head. Target $1,300 copied from that row and equally unverified — both get validated against live market when checking opens 1/15/27. Saturday returns on transatlantic often price at or below midweek, so this may come in cheaper despite three extra days."
     },
     {
       "route": "CUN → TPA",
