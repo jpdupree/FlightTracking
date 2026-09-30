@@ -401,7 +401,7 @@
         </div>
         <label>Notes</label>
         <input name="notes">
-        <label>GitHub token — optional, enables one-tap commit · stored only on this device</label>
+        <label>GitHub token — optional, enables one-tap commit · saved on this device as soon as you enter it</label>
         <input name="token" type="password" placeholder="github_pat_…" autocomplete="off">
         <div class="actions">
           <button type="submit" class="add-btn">Commit to Board</button>
@@ -584,6 +584,23 @@ document.getElementById("add-trip").onclick = () => {
   setMsg("");
   modalBack.hidden = false;
 };
+// Persist the token the moment it's entered rather than only after a
+// successful commit, so ✕ Remove (which reads storage and never prompts)
+// works without needing an Add first. Clearing the field forgets it.
+form.token.onchange = () => {
+  const t = form.token.value.trim();
+  if (!t) {
+    localStorage.removeItem("gh-token");
+    setMsg("Token cleared from this device.");
+  } else if (t.length < 20) {
+    // Too short to be a real PAT — don't clobber a working one over a typo.
+    setMsg("That doesn't look like a token — not saved.", true);
+  } else {
+    localStorage.setItem("gh-token", t);
+    setMsg("Token saved to this device.");
+  }
+};
+
 document.getElementById("modal-cancel").onclick = () => { modalBack.hidden = true; };
 modalBack.addEventListener("click", e => { if (e.target === modalBack) modalBack.hidden = true; });
 
