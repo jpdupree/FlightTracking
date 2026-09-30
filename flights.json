@@ -87,6 +87,16 @@
           "note": "One of only seven Admirals Clubs outside the US. Open 05:00–19:30 — the 6:21 PM return clears it, but not by much. Arrive with time."
         }
       ]
+    },
+    {
+      "route": "test",
+      "dates": "test",
+      "type": "buy",
+      "currentPrice": null,
+      "buyTarget": null,
+      "startChecking": null,
+      "buyWindowEnd": null,
+      "notes": ""
     }
   ],
   "booked": [
