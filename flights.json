@@ -31,17 +31,6 @@
       "notes": "Swiss Alps 100 — longer-stay alternative to the Aug 4–11 row (Sat Aug 14 return vs Wed Aug 11). Window mirrors the sibling watch so the two price head-to-head. Target $1,300 copied from that row and equally unverified — both get validated against live market when checking opens 1/15/27. Saturday returns on transatlantic often price at or below midweek, so this may come in cheaper despite three extra days."
     },
     {
-      "route": "CUN → TPA",
-      "dates": "Nov 13",
-      "type": "reprice",
-      "currentPrice": 211,
-      "buyTarget": 210,
-      "bookedPrice": 266,
-      "startChecking": "2026-07-01",
-      "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main (CUN–MIA–TPA). 10/19 obs: AA $211 Basic — the $210 price line is finally met, BUT the fare routes CUN–DFW–TPA with a 9h17 layover, 7:00 AM departure, 14h58 door to door. NOT a reprice: the routing rule disqualifies it, exactly the trade-off this watch was set up to avoid. Also Expedia-sourced, so unverified against aa.com. Window closes 11/6."
-    },
-    {
       "route": "DFW - LHR",
       "dates": "Jun 22, 2027",
       "type": "buy",
@@ -189,7 +178,7 @@
       "dates": "Nov 13",
       "sortDate": "2026-11-13",
       "fare": "$266 · Main",
-      "notes": "Reprice watch < $250",
+      "notes": "Reprice watch removed 10/19 — cheap fares on this route always routed via a 9h+ layover; $266 Main stands",
       "lounges": [
         {
           "ap": "CUN",
