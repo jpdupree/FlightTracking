@@ -39,7 +39,7 @@
       "bookedPrice": 839,
       "startChecking": "2026-10-19",
       "buyWindowEnd": "2027-06-08",
-      "notes": "Ticketed Main, conf FTRGTQ. EXPENSED — credits get reused for business travel, so the watch is worth running. Separate one-way tickets (multi-city priced $1,653 vs $1,391 combined), so each reprices independently. Trigger ~5% down. VERIFY fare rules show NO CHANGE FEE — the whole watch depends on it. Confirm actual ticketed fare; $839 is today's quote, not a receipt. Check on aa.com, not Expedia — its international pricing has missed by $147–$362 three times.",
+      "notes": "Ticketed Main, conf FTRGTQ. EXPENSED — credits get reused for business travel, so the watch is worth running. Separate one-way tickets (multi-city priced $1,653 vs $1,391 combined), so each reprices independently. Trigger ~5% down. VERIFY fare rules show NO CHANGE FEE — the whole watch depends on it. Fare CONFIRMED at $839 paid. Two separate tickets confirmed, so this leg reprices on its own. Check on aa.com, not Expedia — its international pricing has missed by $147–$362 three times.",
       "lounges": [
         {
           "ap": "DFW",
@@ -66,7 +66,7 @@
       "bookedPrice": 552,
       "startChecking": "2026-10-19",
       "buyWindowEnd": "2027-06-21",
-      "notes": "Ticketed Main, conf 2G47J6. EXPENSED — credits get reused for business travel, so the watch is worth running. Separate one-way tickets (multi-city priced $1,653 vs $1,391 combined), so each reprices independently. Trigger ~5% down. VERIFY fare rules show NO CHANGE FEE — the whole watch depends on it. Confirm actual ticketed fare; $552 is today's quote, not a receipt. Check on aa.com, not Expedia — its international pricing has missed by $147–$362 three times.",
+      "notes": "Ticketed Main, conf 2G47J6. EXPENSED — credits get reused for business travel, so the watch is worth running. Separate one-way tickets (multi-city priced $1,653 vs $1,391 combined), so each reprices independently. Trigger ~5% down. VERIFY fare rules show NO CHANGE FEE — the whole watch depends on it. Fare CONFIRMED at $552 paid. Two separate tickets confirmed, so this leg reprices on its own. Check on aa.com, not Expedia — its international pricing has missed by $147–$362 three times.",
       "lounges": [
         {
           "ap": "GVA",
@@ -339,7 +339,7 @@
       "dates": "Jun 22, 2027",
       "sortDate": "2027-06-22",
       "fare": "$839 · Main · O · conf FTRGTQ",
-      "notes": "WTM 2027 · AA 20 nonstop 6:15 PM, seat 20D · EXPENSED · SWU CANDIDATE — AA metal, O class, eligible; request early · fare provisional, confirm ticketed amount",
+      "notes": "WTM 2027 · AA 20 nonstop 6:15 PM, seat 20D · EXPENSED · separate one-way ticket · SWU CANDIDATE — AA metal, O class, eligible; VERIFY live SWU count and EXPIRY in the AAdvantage account (the '2 SWU' on the masthead is static text and one went to the Jun 2026 LHR trip)",
       "lounges": [
         {
           "ap": "DFW",
@@ -362,7 +362,7 @@
       "dates": "Jul 5, 2027",
       "sortDate": "2027-07-05",
       "fare": "$552 · Main · S/O · conf 2G47J6 (BA)",
-      "notes": "Home from Morzine · AA 6864 (BA-operated) GVA 7:00a → LHR, then AA 21 LHR 9:45a → DFW 1:55p, seat 20J · 2h T5→T3 connection, tight · EXPENSED · fare provisional",
+      "notes": "Home from Morzine · AA 6864 (BA-operated) GVA 7:00a → LHR, then AA 21 LHR 9:45a → DFW 1:55p, seat 20J · 2h T5→T3 connection, tight · EXPENSED · separate one-way ticket",
       "lounges": [
         {
           "ap": "GVA",
