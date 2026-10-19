@@ -8,7 +8,7 @@
       "buyTarget": 500,
       "startChecking": "2026-12-07",
       "buyWindowEnd": "2027-05-21",
-      "notes": "Home from Morzine after Spartan Ultra World Champs (Jul 3, 50k — race Sat, recover Sun, fly Mon). Fares live since ~8/8/26. 10/19/26: MAIN $552 (Basic $461; $351 of it tax), GVA–LHR–DFW 2h connect, BA metal into LHR. Miles break-even at 2.0 cpp = ~27,500 — but BA-metal awards carry heavy surcharges and every $1 of surcharge cuts the break-even, e.g. $250 surcharge -> ~15,000 miles. Likely shape: miles on the AA-metal outbound, CASH on this leg. Trip plan: Eurostar London→Lille Jun 29, TGV to Reims, car pickup Reims (verify Avis GVA one-way drop; CDG fallback), Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector."
+      "notes": "Home from Morzine after Spartan Ultra World Champs (Jul 3, 50k — race Sat, recover Sun, fly Mon). Fares live since ~8/8/26. 10/19/26: MAIN $552 (Basic $461; $351 of it tax), GVA–LHR–DFW 2h connect, BA metal into LHR. Miles break-even at 2.0 cpp = ~27,500 — but BA-metal awards carry heavy surcharges and every $1 of surcharge cuts the break-even, e.g. $250 surcharge -> ~15,000 miles. Open-jaw ruled out 10/19 (multi-city $1,653 vs $1,391 as two one-ways). Book separately; pay CASH on this leg unless an AA-metal routing with low surcharges appears. Trip plan: Eurostar London→Lille Jun 29, TGV to Reims, car pickup Reims (verify Avis GVA one-way drop; CDG fallback), Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector."
     },
     {
       "route": "DFW ⇄ ZRH",
@@ -38,7 +38,7 @@
       "buyTarget": 755,
       "startChecking": "2026-11-24",
       "buyWindowEnd": "2027-05-08",
-      "notes": "One way to WTM 2027. Fares live since ~7/26/26. 10/19/26: AA 20 nonstop 6:15p — MAIN $839 (Basic $719; $419 of it tax). Miles break-even at 2.0 cpp = ~41,500 AA miles; AA 20 is AA METAL so award surcharges are minimal and nearly the full $839 converts — price the award first. STILL UNPRICED: the DFW→LHR / GVA→DFW open-jaw on aa.com multi-city, which normally beats two one-ways ($1,391 Main combined). Target $755 is ~90% of observed Main and provisional until the open-jaw and award are known."
+      "notes": "One way to WTM 2027. 10/19/26: AA 20 nonstop 6:15p — MAIN $839 (Basic $719; $419 tax). OPEN-JAW RESOLVED: DFW→LHR / GVA→DFW as one multi-city ticket prices $1,653 — WORSE than two separate one-ways ($1,391) by $262. Transatlantic one-ways now price at true half-round-trip, and an open-jaw across two markets (US–UK / CH–US) forces combinable higher buckets. DECISION: book as two separate one-ways; legs are 13 days apart so there is no connection to protect, and each ticket stays independently repriceable. REMAINING LEVER: award on this leg — AA metal, so under ~41,500 miles take the award and cash outlay for the trip drops to ~$552."
     },
     {
       "route": "London → Reims (rail)",
