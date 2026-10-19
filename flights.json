@@ -4,11 +4,11 @@
       "route": "GVA → DFW",
       "dates": "Jul 5, 2027",
       "type": "buy",
-      "currentPrice": null,
+      "currentPrice": 461,
       "buyTarget": null,
       "startChecking": "2026-12-07",
       "buyWindowEnd": "2027-05-21",
-      "notes": "Home from Morzine after Spartan Ultra World Champs (Jul 3, 50k — done Saturday, Sunday to recover, fly Monday). BA via LHR or IB via MAD, oneworld. Trip plan: Eurostar London→Lille Jun 29, TGV to Reims, car pickup Reims (verify Avis GVA one-way drop; CDG fallback), Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector."
+      "notes": "Home from Morzine after Spartan Ultra World Champs (Jul 3, 50k — done Saturday, Sunday to recover, fly Monday). BA via LHR or IB via MAD, oneworld. Trip plan: Eurostar London→Lille Jun 29, TGV to Reims, car pickup Reims (verify Avis GVA one-way drop; CDG fallback), Champagne/Burgundy→Jura→Annecy drive, Morzine Fri Jul 2, drop car GVA French sector. | 10/19/26 first obs: $461 Basic one-way ($110 base + $351 tax), GVA–LHR–DFW 2h connection, BA metal into LHR. BA-operated legs carry heavy award surcharges — check AA-metal options or the open-jaw before committing. Schedules opened ~8/8/26."
     },
     {
       "route": "DFW ⇄ ZRH",
@@ -34,11 +34,11 @@
       "route": "DFW - LHR",
       "dates": "Jun 22, 2027",
       "type": "buy",
-      "currentPrice": null,
+      "currentPrice": 719,
       "buyTarget": null,
       "startChecking": "2026-11-24",
       "buyWindowEnd": "2027-05-08",
-      "notes": "One way to WTM 2027 (race weekend, UK). Award one-ways price clean; if paying cash, compare against the LHR/GVA open-jaw before buying two one-ways."
+      "notes": "One way to WTM 2027 (race weekend, UK). Schedules opened ~7/26/26 (AA ~331d) — fares live since then. 10/19/26 first obs: AA 20 nonstop 6:15p, $719 Basic one-way = $300 base + $419 TAX. Taxes dominate (UK APD + surcharges). Pair with GVA→DFW ($461, $351 of it tax) = $1,180 for two Basic one-ways. DO NOT buy two one-ways without pricing the DFW→LHR / GVA→DFW OPEN-JAW on aa.com multi-city — Expedia can't quote multi-city. AA 20 is AA metal, so an AA award here is surcharge-light."
     },
     {
       "route": "London → Reims (rail)",
