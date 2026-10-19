@@ -34,12 +34,12 @@
       "route": "CUN → TPA",
       "dates": "Nov 13",
       "type": "reprice",
-      "currentPrice": 238,
+      "currentPrice": 211,
       "buyTarget": 210,
       "bookedPrice": 266,
       "startChecking": "2026-07-01",
       "buyWindowEnd": "2026-11-06",
-      "notes": "Booked $266 Main (CUN–MIA–TPA). 9/16 obs: AA $238 Basic floor via CLT, up 10% from $217 — drifting away from the $210 line, now $28 above it. Two months to departure. Target calibrated off Expedia floors; confirm on aa.com before acting."
+      "notes": "Booked $266 Main (CUN–MIA–TPA). 10/19 obs: AA $211 Basic — the $210 price line is finally met, BUT the fare routes CUN–DFW–TPA with a 9h17 layover, 7:00 AM departure, 14h58 door to door. NOT a reprice: the routing rule disqualifies it, exactly the trade-off this watch was set up to avoid. Also Expedia-sourced, so unverified against aa.com. Window closes 11/6."
     },
     {
       "route": "DFW - LHR",
@@ -57,36 +57,9 @@
       "type": "buy",
       "currentPrice": null,
       "buyTarget": null,
-      "startChecking": "2026-10-01",
+      "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-05-31",
-      "notes": "NOT a flight — booking reminder, no fare search. Eurostar London→Lille + TGV Lille→Reims; car pickup Reims (or CDG fallback). Trains and car are flexible/no-rush, but Eurostar prices climb like airfares — book when sales open (~Oct 2026, ~$60–90 cheap seats)."
-    },
-    {
-      "route": "DFW ⇄ YYZ",
-      "dates": "Oct 16–17",
-      "type": "reprice",
-      "currentPrice": 664,
-      "buyTarget": 610,
-      "bookedPrice": 636,
-      "startChecking": "2026-09-02",
-      "buyWindowEnd": "2026-10-02",
-      "notes": "Ticketed $636 Main on aa.com (AA2804 6:39p / AA1111 6:21p). 9/16 Expedia screen: $532 Main-labelled, up from $517 — but on 9/10 aa.com showed Main $664 against Expedia's $517, a $147 gap, so Expedia is directional only. currentPrice holds the last VERIFIED aa.com Main ($664). Reprice when aa.com Main < ~$610. Expedia has not fallen enough to justify reopening the AA change flow. Window closes 10/2.",
-      "lounges": [
-        {
-          "ap": "DFW",
-          "name": "Admirals Club",
-          "loc": "A/B/C/D",
-          "ok": true,
-          "note": "Admirals Club membership (Citi Exec). 6:39 PM departure — all DFW clubs open."
-        },
-        {
-          "ap": "YYZ",
-          "name": "Admirals Club",
-          "loc": "T3 transfer lvl",
-          "ok": true,
-          "note": "One of only seven Admirals Clubs outside the US. Open 05:00–19:30 — the 6:21 PM return clears it, but not by much. Arrive with time."
-        }
-      ]
+      "notes": "NOT a flight — booking reminder, no fare search. Eurostar London→Lille + TGV Lille→Reims; car pickup Reims (or CDG fallback). 10/19 check: Eurostar inventory currently extends only to 17 Mar 2027, so 29 Jun 2027 is NOT yet bookable — the old ~Oct 2026 estimate was too early. Horizon is ~360 days but actual release lags, and Eurostar's cheapest fares typically surface 4–5 months out, i.e. Feb–Mar 2027. Window start moved to 1/15/27 to catch the release."
     }
   ],
   "booked": [
@@ -321,7 +294,7 @@
       "dates": "Oct 16–17",
       "sortDate": "2026-10-16",
       "fare": "$636 · Main · $139 credit applied ($497 net)",
-      "notes": "AA 2804 out 6:39 PM / AA 1111 back 6:21 PM · nonstops · Main for reprice + upgrade eligibility · declined +$91 refundable · reprice watch < ~$560 Main",
+      "notes": "AA 2804 out / AA 1111 back · nonstops · Main for reprice + upgrade eligibility · $139 credit applied ($497 net) · reprice watch closed 10/2 untriggered — aa.com Main sat at $664 vs the $636 paid, so the ticket was bought under market and stayed there",
       "lounges": [
         {
           "ap": "DFW",
