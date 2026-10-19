@@ -14,21 +14,21 @@
       "route": "DFW ⇄ ZRH",
       "dates": "Aug 4–11, 2027",
       "type": "buy",
-      "currentPrice": 771,
-      "buyTarget": 690,
+      "currentPrice": 1252,
+      "buyTarget": 1130,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-06-01",
-      "notes": "Swiss Alps 100 — Wed Aug 11 return. 10/19/26: $770.59 Basic, same price as the Aug 14 row but a worse routing (best return 5h40 LHR layover, 17h50 total vs 13h40). NO reason to prefer this over Aug 4–14 unless the dates are fixed. Head-to-head resolved in favour of the longer trip."
+      "notes": "Swiss Alps 100. 10/19/26 aa.com: MAIN $1,252 — the authoritative number. Expedia showed $770 'Basic' and a $890 Main estimate; BOTH WRONG by ~$362. Third failure of Expedia international pricing (cf. YYZ $517 vs $664). DO NOT extrapolate Main from Expedia on these routes — screen only, confirm on aa.com. The original $1,300 placeholder was within 4% and should not have been reset to $690. Target now $1,130 (~90% of the verified aa.com Main). Wed Aug 11 return. Expedia showed price parity with the Aug 14 row and a worse routing, but that comparison is unverified — re-check both dates on aa.com."
     },
     {
       "route": "DFW ⇄ ZRH",
       "dates": "Aug 4–14, 2027",
       "type": "buy",
-      "currentPrice": 771,
-      "buyTarget": 690,
+      "currentPrice": 1252,
+      "buyTarget": 1130,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-06-01",
-      "notes": "Swiss Alps 100 — PREFERRED over the Aug 4–11 row. 10/19/26 first obs: $770.59 Basic, IDENTICAL to the Aug 11 return, so the three extra days are free. Routing is also better: best Aug 14 return has a 1h30 LHR connection (13h40 total) vs Aug 11's best at 5h40 / 17h50. Out: AA 78 DFW–LHR (AA metal) 8:50p + BA short-haul to ZRH. Fare is $101 base + $670 TAX (87%) — tested routing around LHR via Iberia/Dublin and it was WORSE ($938, 2 stops each way, 26h35 return, still transits LHR), so the tax is structural, not avoidable. Old $1,300 target was ~45% above market; reset to $690 on the BASIC basis tracked here. Main est ~$890 (using the $120 LHR-route spread) — unverified, confirm on aa.com before buying."
+      "notes": "Swiss Alps 100. 10/19/26 aa.com: MAIN $1,252 — the authoritative number. Expedia showed $770 'Basic' and a $890 Main estimate; BOTH WRONG by ~$362. Third failure of Expedia international pricing (cf. YYZ $517 vs $664). DO NOT extrapolate Main from Expedia on these routes — screen only, confirm on aa.com. The original $1,300 placeholder was within 4% and should not have been reset to $690. Target now $1,130 (~90% of the verified aa.com Main). UNVERIFIED: Expedia priced Aug 11 and Aug 14 identically, which is why this row was preferred — but that parity came from the same unreliable source. Check Aug 11 vs Aug 14 Main on aa.com before assuming the longer trip is free. Expedia did show Aug 14 with the better routing (1h30 LHR connection, 13h40) vs Aug 11 (5h40, 17h50)."
     },
     {
       "route": "DFW - LHR",
