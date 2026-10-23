@@ -229,6 +229,16 @@
     }
   }
 
+  .track {
+    display: inline-block; margin-top: 9px;
+    font-family: var(--font-board); font-weight: 700; font-size: 11px;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    background: transparent; border: 1px solid var(--amber);
+    border-radius: 3px; padding: 4px 9px; color: var(--amber);
+    text-decoration: none; white-space: nowrap;
+  }
+  .track:hover, .track:focus-visible { background: var(--amber); color: var(--cell); }
+
   /* ── Legend / framework footer ── */
   .framework {
     margin-top: 52px;
@@ -416,7 +426,7 @@
   <div class="framework">
     <div><b>Status logic.</b> TOO EARLY before start-check date · BUY NOW when current ≤ target · WATCH inside the window · LATE past it. Reprice rows flip green when the fare hits target.</div>
     <div><b>Reprice mechanics.</b> Change Flight flow, identical segments — difference returns as trip credit. SWU survives a rebook via Change.</div>
-    <div><b>Where fares come from.</b> Google Flights with cabin set to &ldquo;Economy (exclude basic)&rdquo; and tracking on &mdash; the only automated source that shows Main instead of Basic, and it emails the drop. aa.com confirms the number before any change; Expedia screens for movement only.</div>
+    <div><b>Where fares come from.</b> Google Flights with cabin set to &ldquo;Economy (exclude basic)&rdquo; and tracking on &mdash; the only automated source that shows Main instead of Basic, and it emails the drop. aa.com confirms the number before any change; Expedia screens for movement only. The Track chip on each row opens the right search &mdash; set the cabin and switch tracking on once per route.</div>
     <div><b>Miles line.</b> 2.0 cpp is the miles-vs-cash decision line; below that, pay cash. Awards cancel and redeposit cleanly — use as optionality.</div>
     <div><b>Lounge access.</b> All of it comes from the Citi Executive Admirals Club membership — Admirals Clubs plus all Alaska Lounges, on a same-day AA or oneworld boarding pass, arriving or departing. Brings 2 guests or immediate family.</div>
     <div><b>What status doesn't buy.</b> Platinum Pro is oneworld Emerald, but AA elites get no lounge on North American itineraries — every trip on this board. Status only opens lounges once you leave North America. Chase Priority Pass ended when that card closed.</div>
@@ -461,6 +471,17 @@ function loungeStrip(lounges) {
       l.loc ? ` <i class="loc">${esc(l.loc)}</i>` : ""}</span>`).join("")}</div>`;
 }
 
+// Google Flights opens on the right route and dates; cabin still has to be set
+// to "Economy (exclude basic)" and Track switched on once, by hand — neither
+// survives in a q= link, and the tfs protobuf field for excluding basic isn't
+// documented well enough to risk a broken URL.
+function trackChip(w) {
+  if (!w.trackUrl) return "";
+  return `<a class="track" href="${esc(w.trackUrl)}" target="_blank" rel="noopener"
+    title="Opens Google Flights. Set cabin to Economy (exclude basic), then switch on Track prices."
+    >\u2197 Track on Google Flights</a>`;
+}
+
 function watchRow(w, s, i) {
   const hit = w.currentPrice != null && w.buyTarget != null && w.currentPrice <= w.buyTarget;
   return `<div class="row">
@@ -483,6 +504,7 @@ function watchRow(w, s, i) {
       </div>
       ${w.notes ? `<div class="notes">${w.notes}</div>` : ""}
       ${loungeStrip(w.lounges)}
+      ${trackChip(w)}
     </div>
     <div class="flap ${s.cls}">${s.label}</div>
     <button class="del-btn" type="button" data-list="watches" data-i="${i}">✕ Remove</button>
