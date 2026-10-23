@@ -8,7 +8,7 @@
       "buyTarget": 1220,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-06-01",
-      "notes": "Swiss Alps 100. 10/19/26 aa.com: MAIN $1,252 — the authoritative number. Expedia showed $770 'Basic' and a $890 Main estimate; BOTH WRONG by ~$362. Third failure of Expedia international pricing (cf. YYZ $517 vs $664). DO NOT extrapolate Main from Expedia on these routes — screen only, confirm on aa.com. SCREENING: Google Flights does NOT offer \"Economy (exclude Basic)\" on this route — checked 10/23/26, the cabin menu is only Economy / Premium economy / Business / First here (the option does appear on DFW–LAX, so it is US-domestic only). Google tracking on this route follows the cheapest fare, Basic included — movement signal only, same role as Expedia. Main has to come from aa.com. Expedia cannot isolate Main either: its filter_basic_economy parameter was tested both ways on 10/23/26 and ignored both times. The original $1,300 placeholder was within 4% and should not have been reset to $690. Wed Aug 11 return. 10/23/26 Main CHECK (Google Flights booking page, airline-direct fare tiers — NOT yet confirmed on aa.com, its bot check blocked automated search). Like-for-like single tickets, Main / Basic: all-AA via PHL both ways (AA 8:40a out, AA 11:45a back) Aug 11 $1,360 / $1,120, Aug 14 $1,430 / $1,190. AA 8:50p via LHR out + AA 11:45a via PHL back: Aug 11 $1,587 / $1,347, Aug 14 $1,657 / $1,417. Aug 14 is $70 MORE on both. Cheapest changeable seen: Aug 11 BA-ticketed Standard $1,215 (Basic $975), BA 7:40p out + BA 10:15a back via LHR 1h40 — no Saturday equivalent on Aug 14. Aug 14's 'better routing' (7:15a ZRH, 1h30 LHR, 13h40) is real but costs $1,766 BA Standard / $1,780 AA / $2,150 AA Main as one ticket; its $800 headline is two separate tickets via an OTA, fare tier unknown. Expedia's Aug 11 = Aug 14 parity was WRONG. currentPrice = cheapest AA Main seen ($1,360); target $1,220 (~90%). | PERSONAL TRIP — points preferred, but 10/19/26 award = 138,500 miles vs $1,252 cash = 0.90 cpp, and ~0.75 cpp after likely BA surcharges. Far below the 2.0 line: PAY CASH. 138.5k at 2.0 cpp is ~$2,770 of value elsewhere, so redeeming here destroys ~$1,500. 138.5k = AA dynamic pricing with NO saver space open, not the trip's true mileage cost. AWARD TRIGGER: take the award only if saver opens at <= ~62,600 miles (or ~50,000 after a $250 surcharge). Watch award space alongside cash — peak-August Europe saver does open in waves.",
+      "notes": "Swiss Alps 100 · Main $1,360 all-AA via PHL (Google airline-direct, 10/23) · $70 cheaper than Aug 14 · BA Standard $1,215 also changeable · pay cash: award only if saver ≤ ~68k miles",
       "trackUrl": "https://www.google.com/travel/flights?q=Flights%20from%20DFW%20to%20ZRH%20on%202027-08-04%20through%202027-08-11"
     },
     {
@@ -19,7 +19,7 @@
       "buyTarget": 1290,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-06-01",
-      "notes": "Swiss Alps 100. 10/19/26 aa.com: MAIN $1,252 — the authoritative number. Expedia showed $770 'Basic' and a $890 Main estimate; BOTH WRONG by ~$362. Third failure of Expedia international pricing (cf. YYZ $517 vs $664). DO NOT extrapolate Main from Expedia on these routes — screen only, confirm on aa.com. SCREENING: Google Flights does NOT offer \"Economy (exclude Basic)\" on this route — checked 10/23/26, the cabin menu is only Economy / Premium economy / Business / First here (the option does appear on DFW–LAX, so it is US-domestic only). Google tracking on this route follows the cheapest fare, Basic included — movement signal only, same role as Expedia. Main has to come from aa.com. Expedia cannot isolate Main either: its filter_basic_economy parameter was tested both ways on 10/23/26 and ignored both times. The original $1,300 placeholder was within 4% and should not have been reset to $690. Sat Aug 14 return. 10/23/26 Main CHECK (Google Flights booking page, airline-direct fare tiers — NOT yet confirmed on aa.com, its bot check blocked automated search). Like-for-like single tickets, Main / Basic: all-AA via PHL both ways (AA 8:40a out, AA 11:45a back) Aug 11 $1,360 / $1,120, Aug 14 $1,430 / $1,190. AA 8:50p via LHR out + AA 11:45a via PHL back: Aug 11 $1,587 / $1,347, Aug 14 $1,657 / $1,417. Aug 14 is $70 MORE on both. Cheapest changeable seen: Aug 11 BA-ticketed Standard $1,215 (Basic $975), BA 7:40p out + BA 10:15a back via LHR 1h40 — no Saturday equivalent on Aug 14. Aug 14's 'better routing' (7:15a ZRH, 1h30 LHR, 13h40) is real but costs $1,766 BA Standard / $1,780 AA / $2,150 AA Main as one ticket; its $800 headline is two separate tickets via an OTA, fare tier unknown. Expedia's Aug 11 = Aug 14 parity was WRONG. currentPrice = cheapest AA Main seen ($1,430); target $1,290 (~90%). Not dropping the Aug 11 row — Aug 14 is not free. | PERSONAL TRIP — points preferred, but 10/19/26 award = 138,500 miles vs $1,252 cash = 0.90 cpp, and ~0.75 cpp after likely BA surcharges. Far below the 2.0 line: PAY CASH. 138.5k at 2.0 cpp is ~$2,770 of value elsewhere, so redeeming here destroys ~$1,500. 138.5k = AA dynamic pricing with NO saver space open, not the trip's true mileage cost. AWARD TRIGGER: take the award only if saver opens at <= ~62,600 miles (or ~50,000 after a $250 surcharge). Watch award space alongside cash — peak-August Europe saver does open in waves.",
+      "notes": "Swiss Alps 100 · Main $1,430 all-AA via PHL (Google airline-direct, 10/23) · $70 more than Aug 11 · nicer return (7:15a ZRH, 1h30 LHR) is $1,766+ as one ticket · pay cash: award only if saver ≤ ~71k miles",
       "trackUrl": "https://www.google.com/travel/flights?q=Flights%20from%20DFW%20to%20ZRH%20on%202027-08-04%20through%202027-08-14"
     },
     {
@@ -30,7 +30,7 @@
       "buyTarget": null,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-05-31",
-      "notes": "NOT a flight — booking reminder, no fare search. Eurostar London→Lille + TGV Lille→Reims; car pickup Reims (or CDG fallback). 10/19 check: Eurostar inventory currently extends only to 17 Mar 2027, so 29 Jun 2027 is NOT yet bookable — the old ~Oct 2026 estimate was too early. Horizon is ~360 days but actual release lags, and Eurostar's cheapest fares typically surface 4–5 months out, i.e. Feb–Mar 2027. Window start moved to 1/15/27 to catch the release."
+      "notes": "Not a flight · Eurostar London → Lille + TGV → Reims, car in Reims (CDG fallback) · not bookable yet (inventory ends Mar 17, 2027) · best fares ~Feb–Mar 2027"
     },
     {
       "route": "DFW → LHR",
@@ -41,7 +41,7 @@
       "bookedPrice": 839,
       "startChecking": "2026-10-19",
       "buyWindowEnd": "2027-06-08",
-      "notes": "Ticketed Main, conf FTRGTQ. EXPENSED — credits get reused for business travel, so the watch is worth running. Separate one-way tickets (multi-city priced $1,653 vs $1,391 combined), so each reprices independently. Trigger ~5% down. CHANGES ALLOWED — confirmed on the ticket 10/23/26, so a drop can be captured as trip credit with no fee. That was the condition this watch rested on. Fare CONFIRMED at $839 paid. Two separate tickets confirmed, so this leg reprices on its own. Google Flights does NOT offer \"Economy (exclude Basic)\" on transatlantic routes (checked 10/23/26 — US-domestic only), so its tracking follows the cheapest fare, Basic included: movement signal only. 10/23/26 Google showed AA 20 at $732 one-way, below the $839 paid — that is Basic, not a Main drop. Confirm the number on aa.com before acting; Expedia's international pricing has missed by $147–$362 three times, and its filter_basic_economy switch is broken — tested both true and false on 10/23/26, both returned Basic Economy. Only cabin_class works, and it has no Main Cabin value.",
+      "notes": "Booked Main $839 · conf FTRGTQ · expensed · changes allowed: if Main drops, rebook same flights on aa.com for trip credit · Google alerts include Basic — confirm Main on aa.com",
       "lounges": [
         {
           "ap": "DFW",
@@ -69,7 +69,7 @@
       "bookedPrice": 552,
       "startChecking": "2026-10-19",
       "buyWindowEnd": "2027-06-21",
-      "notes": "Ticketed Main, conf 2G47J6. EXPENSED — credits get reused for business travel, so the watch is worth running. Separate one-way tickets (multi-city priced $1,653 vs $1,391 combined), so each reprices independently. Trigger ~5% down. CHANGES ALLOWED — confirmed on the ticket 10/23/26, so a drop can be captured as trip credit with no fee. That was the condition this watch rested on. Fare CONFIRMED at $552 paid. Two separate tickets confirmed, so this leg reprices on its own. Google Flights does NOT offer \"Economy (exclude Basic)\" on transatlantic routes (checked 10/23/26 — US-domestic only), so its tracking follows the cheapest fare, Basic included: movement signal only. 10/23/26 Google showed AA 20 at $732 one-way, below the $839 paid — that is Basic, not a Main drop. Confirm the number on aa.com before acting; Expedia's international pricing has missed by $147–$362 three times, and its filter_basic_economy switch is broken — tested both true and false on 10/23/26, both returned Basic Economy. Only cabin_class works, and it has no Main Cabin value.",
+      "notes": "Booked Main $552 · conf 2G47J6 · expensed · changes allowed: if Main drops, rebook same flights on aa.com for trip credit · Google alerts include Basic — confirm Main on aa.com",
       "lounges": [
         {
           "ap": "GVA",
@@ -143,7 +143,7 @@
       "dates": "Sep 24–28",
       "sortDate": "2026-09-24",
       "fare": "$317 · Main",
-      "notes": "100-mile race · switched from 25k award 7/12 (was ~1.2 cpp) · reprice watch closed 9/17 untriggered · $317 Main vs a $524 Basic floor at close — the award switch and the early buy both paid off",
+      "notes": "100-mile race · switched from 25k award · reprice watch closed untriggered",
       "lounges": [
         {
           "ap": "DFW",
@@ -297,7 +297,7 @@
       "dates": "Aug 20–23",
       "sortDate": "2026-08-20",
       "fare": "32.5k miles + $11 · ~1.5 cpp",
-      "notes": "Ragnar Rainier · AS nonstops · in progress Aug 20–23 · held the 32.5k award; cash hit $553 Saver / ~$650 Main by departure (~2.0 cpp)",
+      "notes": "Ragnar Rainier · AS nonstops · award held up at ~2.0 cpp",
       "lounges": [
         {
           "ap": "DFW",
@@ -320,7 +320,7 @@
       "dates": "Oct 16–17",
       "sortDate": "2026-10-16",
       "fare": "$636 · Main · $139 credit applied ($497 net)",
-      "notes": "AA 2804 out / AA 1111 back · nonstops · Main for reprice + upgrade eligibility · $139 credit applied ($497 net) · reprice watch closed 10/2 untriggered — aa.com Main sat at $664 vs the $636 paid, so the ticket was bought under market and stayed there",
+      "notes": "AA 2804 out / AA 1111 back · nonstops · reprice watch closed untriggered",
       "lounges": [
         {
           "ap": "DFW",
@@ -343,7 +343,7 @@
       "dates": "Jun 22, 2027",
       "sortDate": "2027-06-22",
       "fare": "$839 · Main · O · conf FTRGTQ",
-      "notes": "WTM 2027 · AA 20 nonstop 6:15 PM, seat 20D · EXPENSED · separate one-way ticket · SWU CANDIDATE — AA metal, O class, eligible; VERIFY live SWU count and EXPIRY in the AAdvantage account (the '2 SWU' on the masthead is static text and one went to the Jun 2026 LHR trip)",
+      "notes": "WTM 2027 · AA 20 nonstop 6:15 PM, seat 20D · expensed · separate one-way",
       "lounges": [
         {
           "ap": "DFW",
@@ -366,7 +366,7 @@
       "dates": "Jul 5, 2027",
       "sortDate": "2027-07-05",
       "fare": "$552 · Main · S/O · conf 2G47J6 (BA)",
-      "notes": "Home from Morzine · AA 6864 (BA-operated) GVA 7:00a → LHR, then AA 21 LHR 9:45a → DFW 1:55p, seat 20J · 2h T5→T3 connection, tight · EXPENSED · separate one-way ticket",
+      "notes": "Home from Morzine · BA GVA 7:00a → LHR, AA 21 9:45a → DFW, seat 20J · tight 2h T5→T3 · expensed",
       "lounges": [
         {
           "ap": "GVA",
