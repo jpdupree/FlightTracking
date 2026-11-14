@@ -215,7 +215,7 @@
       "dates": "Nov 13",
       "sortDate": "2026-11-13",
       "fare": "$266 · Main",
-      "notes": "Reprice watch removed 10/19 — cheap fares on this route always routed via a 9h+ layover; $266 Main stands",
+      "notes": "Stuck in MIA — never made it to TPA",
       "lounges": [
         {
           "ap": "CUN",
@@ -240,11 +240,11 @@
       ]
     },
     {
-      "route": "TPA → DFW",
+      "route": "MIA → DFW",
       "dates": "Nov 14",
       "sortDate": "2026-11-14",
-      "fare": "$279 · Main",
-      "notes": "Evening nonstop required",
+      "fare": "Main · rebooked",
+      "notes": "Rebooked AA 3321 12:15p → 2:39p · straight home from MIA, Tampa skipped (was TPA evening nonstop, $279 Main)",
       "lounges": [
         {
           "ap": "TPA",
