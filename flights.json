@@ -8,7 +8,7 @@
       "buyTarget": 1220,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-06-01",
-      "notes": "Swiss Alps 100 · Main $1,387 all-AA via PHL, 8:40a out (7:30a out now same $1,387; was $1,311) (Google airline-direct, 11/23) · $70 cheaper than Aug 14 · BA Standard $1,215 also changeable (10/23) · pay cash: award only if saver ≤ ~69k miles",
+      "notes": "Swiss Alps 100 · Main $1,387 all-AA via PHL, 8:40a out (7:30a out $1,286 — $101 cheaper again) (Google airline-direct, 11/25) · $70 cheaper than Aug 14 · BA Standard $1,215 also changeable (10/23) · pay cash: award only if saver ≤ ~69k miles",
       "trackUrl": "https://www.google.com/travel/flights?q=Flights%20from%20DFW%20to%20ZRH%20on%202027-08-04%20through%202027-08-11"
     },
     {
@@ -19,7 +19,7 @@
       "buyTarget": 1290,
       "startChecking": "2027-01-15",
       "buyWindowEnd": "2027-06-01",
-      "notes": "Swiss Alps 100 · Main $1,457 all-AA via PHL, 8:40a out (7:30a out now same $1,457; was $1,381) (Google airline-direct, 11/23) · $70 more than Aug 11 · nicer return (7:15a ZRH, 1h30 LHR) is $1,802+ as one ticket (11/16) · pay cash: award only if saver ≤ ~73k miles",
+      "notes": "Swiss Alps 100 · Main $1,457 all-AA via PHL, 8:40a out (7:30a out $1,356 — $101 cheaper again) (Google airline-direct, 11/25) · $70 more than Aug 11 · nicer return (7:15a ZRH, 1h30 LHR) is $1,802+ as one ticket (11/16) · pay cash: award only if saver ≤ ~73k miles",
       "trackUrl": "https://www.google.com/travel/flights?q=Flights%20from%20DFW%20to%20ZRH%20on%202027-08-04%20through%202027-08-14"
     },
     {
@@ -41,7 +41,7 @@
       "bookedPrice": 839,
       "startChecking": "2026-10-19",
       "buyWindowEnd": "2027-06-08",
-      "notes": "Booked Main $839 · conf FTRGTQ · expensed · 11/23 AA 20 Main $854 (Basic $734) — no drop · changes allowed: if Main drops, rebook same flights on aa.com for trip credit",
+      "notes": "Booked Main $839 · conf FTRGTQ · expensed · 11/25 AA 20 Main $854 (Basic $734) — no drop · changes allowed: if Main drops, rebook same flights on aa.com for trip credit",
       "lounges": [
         {
           "ap": "DFW",
@@ -64,12 +64,12 @@
       "route": "GVA → DFW",
       "dates": "Jul 5, 2027",
       "type": "reprice",
-      "currentPrice": 566,
+      "currentPrice": 571,
       "buyTarget": 505,
       "bookedPrice": 552,
       "startChecking": "2026-10-19",
       "buyWindowEnd": "2027-06-21",
-      "notes": "Booked Main $552 · conf 2G47J6 · expensed · 11/23 same flights Main $566 / CHF 475 (Basic $476) — no drop · changes allowed: if Main drops, rebook same flights on aa.com for trip credit",
+      "notes": "Booked Main $552 · conf 2G47J6 · expensed · 11/25 same flights Main $571 / CHF 474 (Basic $480) — no drop · changes allowed: if Main drops, rebook same flights on aa.com for trip credit",
       "lounges": [
         {
           "ap": "GVA",
